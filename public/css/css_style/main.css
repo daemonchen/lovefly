@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document 2011.8.3 */
+body {font-family:Arial,Helvetica,sans-serif; margin:0; padding:0; font-size:14px; color:#6D6D6D; background:#FFF;}
+div,form,img,ul,ol,li,dl,dt,dd,p{margin:0;padding:0;border:0;}
+ul,li{list-style-type:none;}
+img, a img{border:0; vertical-align:top;}
+input,select,textarea{vertical-align:middle;}
+h1,h2,h3,h4,h5,h6 {margin:0;padding:0;font-size:12px;font-weight:normal;}
+/* Link */
+a{color:#333; text-decoration:none;}
+a:hover {color:#ff8700 ; text-decoration:none;}
+/* Other */
+.clear{clear:both;font-size:1px;width:1px;height:0;visibility:hidden;overflow:hidden;}
+.clearfix:after{content:".";display:block; height:0;clear:both;visibility:hidden;} /* only FF */
+.mauto{width:1000px; margin:0 auto;}
+.m_auto{margin:0 auto;}
+
+/* Font  */
+.fb{font-weight:bold;}
+.f11px{font-size:11px;}
+.f14px{font-size:14px;}
+.f16px{font-size:16px;}
+.f10px{font-size:10px;}
+.li20px{line-height:20px;}
+.f18px{font-size:18px;}
+.f20px{font-size:20px;}
+.f24px{font-size:24px;}
+.f30px{font-size:30px;}
+.yahei{font-family:Arial,Helvetica,sans-serif;}
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
+.ml19{margin-left:19px;}
+.fl{float:left;}
+.fr{float:right;}
+.ovht{overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}

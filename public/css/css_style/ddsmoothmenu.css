@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+.ddsmoothmenu{ margin:0 auto;}
+.ddsmoothmenu a{font-size:16px;}
+.ddsmoothmenu ul{
+z-index:100;
+margin:0;
+padding:0;
+list-style-type: none;
+}
+
+/*.i_nav li{float:left; width:115px; height:40px; line-height:40px; text-align:center; font-size:14px;}
+.i_nav li.line{width:2px; background:url(/public/img/nav_line.jpg) no-repeat left top;}
+.i_nav li a{display:block; width:115px; height:40px; color:#FFF;}
+.i_nav li a:hover{color:#FFF; text-decoration:underline;}
+.i_nav li a.on{color:#FFF; text-decoration:none;}*/
+
+.i_n01 a .menuimg{ background:url(/public/img/nav_icoA.png) no-repeat; width:51px; height:43px;}
+.i_n02 a .menuimg{ background:url(/public/img/nav_icoB.png) no-repeat; width:51px; height:43px;}
+.i_n03 a .menuimg{ background:url(/public/img/nav_icoC.png) no-repeat; width:51px; height:43px;}
+.i_n04 a .menuimg{ background:url(/public/img/nav_icoD.png) no-repeat; width:51px; height:43px;}
+.i_n05 a .menuimg{ background:url(/public/img/nav_icoE.png) no-repeat; width:51px; height:43px;}
+.menuword{ color:#fff; text-align:right; padding-right:13px;font-family:"微软雅黑"; font-size:16px; padding-top:5px;}
+
+.ddsmoothmenu ul li{ position:relative;float:left; text-align:right;  width:101px;background: url(/public/img/bgcolor.png) repeat 0px 0px;height: 88px;border-left: 1px solid #FFFFFF;}
+.nava{ height:88px;  color:#FFF; display:block;text-align:right}
+* html .nava{ /*IE6 hack to get sub menu links to behave correctly*/display: inline-block; height:88px;}
+.navactive,.navactive:hover,.nava:hover,.nava.selected{ display:block; height:88px; color:#FFF; text-decoration:none;background: url(/public/img/meng_hover.gif) repeat;}
+.i_n01 .navactive,.i_n02 .navactive,.i_n03 .navactive,.i_n04 .navactive,.i_n05 .navactive{background:url(/public/img/navhover_bg.gif) repeat;}
+.i_nav ul li ul{
+position: absolute;padding-left:0px;
+
+display: none; /*collapse all sub menus to begin with*/
+visibility: hidden;
+}
+* html .i_nav ul li ul{}
+.i_nav ul li ul li{
+display: list-item; padding:0px; margin:0 auto;
+ height:34px;line-height:34px; float:left; background:none;
+}
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.i_nav ul li ul li ul{
+top: 0;
+}
+.i_nav ul li ul li a
+{
+display:block;
+font: normal 12px Verdana;
+ /*width of sub menus*/
+height:34px; width:101px; color:#FFFFFF; text-align:center;
+line-height:34px; background:url(/public/img/navsub_bg.png) repeat;
+
+white-space:nowrap;overflow:hidden;text-overflow:ellipsis; cursor:pointer; margin-top:1px;
+}
+.i_nav ul li ul li a:hover{ text-decoration:none;  background:url(/public/img/navsub_bg.png) repeat; color: #ffde00;}
+/* Holly Hack for IE \*/
+* html .ddsmoothmenu{height: 1%;} /*Holly Hack for IE7 and below*/
+
+
+.downarrowclass{
+position: absolute;
+top: 12px;
+right: 15px;
+}
+.ddshadow{ /*shadow for NON CSS3 capable browsers*/
+position: absolute;
+left: 0;
+top: 0;
+width: 0;
+height: 0;
+}
+
+
+
+
+/*------------------------------------------------------*/
+
+
+
+
+.rightarrowclass{position: absolute;top:10px;right:5px;}
+/* Holly Hack for IE \*/
+* html .sortlist ul li { float: left; height: 1%; }
+* html .sortlist ul li a { height: 1%; }
+/* End */

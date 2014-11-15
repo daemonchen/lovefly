@@ -1,20 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Not found</title>
-	</head>
-	<body>
-{{if eq .RunMode "dev"}}
-{{template "errors/404-dev.html" .}}
-{{else}}
-	{{with .Error}}
-	<h1>
-		{{.Title}}
-	</h1>
-	<p>
-		{{.Description}}
-	</p>
-	{{end}}
-{{end}}
-	</body>
-</html>
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+<div class="content">
+	<div class="spacer">
+	</div>
+    I'm so so sorry, the page you found doesn't exist!
+    <br />
+	<span style="color:#ff7300;">TODO: 404 page design</span>
+    <div class="spacer">
+    </div>
+</div>
+
+<div class="kongHight">
+</div>
+<div class="kongHight">
+</div>
+<div class="kongHight">
+</div>
+<div class="kongHight">
+</div>
+<div class="kongHight">
+</div>
+<div class="kongHight">
+</div>
+<div class="kongHight">
+</div>
+<div class="kongHight">
+</div>
+<div class="kongHight">
+</div>
+<div class="kongHight">
+</div>
+{{template "footer.html" .}}
