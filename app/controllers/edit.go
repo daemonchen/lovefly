@@ -1,7 +1,7 @@
 package controllers
 
 import (
-    "fantastic/app/models"
+    "lovefly/app/models"
     // "fmt"
     "github.com/jgraham909/revmgo"
     "github.com/revel/revel"

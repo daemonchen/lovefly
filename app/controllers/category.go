@@ -2,7 +2,7 @@ package controllers
 
 import (
     // "encoding/json"
-    // "fantastic/app/models"
+    // "lovefly/app/models"
     // "fmt"
     "github.com/jgraham909/revmgo"
     "github.com/revel/revel"

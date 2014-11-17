@@ -1,0 +1,44 @@
+{{set . "title" "Admin"}}
+{{append . "moreScripts" "/public/js/lib/md5.js"}}
+{{append . "moreScripts" "/public/js/page/login.js"}}
+{{append . "moreScripts" "/public/js/page/register.js"}}
+{{template "header.html" .}}
+<link rel="stylesheet" type="text/css" href="http://cdn.staticfile.org/semantic-ui/0.16.1/css/semantic.min.css">
+<div class="content">
+    <div class="column" ng-controller="LoginController">
+        <div class="ui fluid form segment">
+            <h3 class="">登录</h3>
+            <div class="field">
+                <label>用户名</label>
+                <input placeholder="用户名" type="text" ng-model="username" />
+            </div>
+            <div class="field">
+                <label>密码</label>
+                <input type="password" ng-model="password" />
+            </div>
+            <button class="ui blue submit button" ng-click="login()">登录</button>
+        </div>
+    </div>
+    <div class="column" ng-controller="RegisterController">
+        <div class="ui fluid form segment">
+            <h3 class="">注册</h3>
+
+            <div class="field">
+                <label>用户名</label>
+                <input placeholder="用户名" type="text" ng-model="username" />
+            </div>
+            <div class="field">
+                <label>密码</label>
+                <input type="password" ng-model="password" />
+            </div>
+
+            <button class="ui blue submit button" ng-click="register()">注册</button>
+        </div>
+    </div>
+
+    <div class="spacer">
+    </div>
+</div>
+<div class="kongHight">
+</div>
+{{template "footer.html" .}}
