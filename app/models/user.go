@@ -26,8 +26,8 @@ func GetUserByName(s *mgo.Session, Name string) *User {
 }
 
 func (b *User) Save(s *mgo.Session) error {
-    fmt.Println("-----(s)")
-    fmt.Println(Collection(s))
+    fmt.Println("start save user info")
+    // fmt.Println(Collection(s))
     _, err := Collection(s).Upsert(bson.M{"_id": b.Id}, b)
     return err
 }
