@@ -2,7 +2,9 @@ lovefly.controller('RegisterController', function($scope, $http, $log, _) {
     $scope.logError = function(data, status) {
         $log.log('code ' + status + ': ' + data);
     };
+    $scope.refer = document.referrer;
     $scope.register = function() {
+        $log.log($scope.username);
         return $http.post('/admin/register', {
             params: {
                 username: $scope.username,
@@ -10,7 +12,8 @@ lovefly.controller('RegisterController', function($scope, $http, $log, _) {
             }
         }).
         success(function() {
-            window.location.href = "/";
+
+            // window.location.href = $scope.refer;
         }).
         error($scope.logError);
     }

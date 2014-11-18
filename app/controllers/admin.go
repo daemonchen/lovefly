@@ -4,6 +4,7 @@ import (
     "lovefly/app/models"
     // "fmt"
     "crypto/md5"
+    "encoding/json"
     "fmt"
     "github.com/jgraham909/revmgo"
     "github.com/revel/revel"
@@ -41,9 +42,15 @@ func (c Admin) Login(username string, password string) revel.Result {
     }
 }
 
-func (c Admin) Register(username string, password string) revel.Result {
-    pwd := fmt.Sprintf("%x", md5.Sum([]byte(password)))
-    user := &models.User{bson.NewObjectId(), username, pwd, 1}
+func (c Admin) Register(user *models.User) revel.Result {
+    user.Id = bson.NewObjectId()
+    user.UserType = 1
+    decoder := json.NewDecoder(c.Request.Body)
+    decoder.Decode(&user)
+    fmt.Println("-------user:", user, c.Request.Body)
+    pwd := fmt.Sprintf("%x", md5.Sum([]byte(user.Password)))
+    fmt.Println("-------pwd:", pwd)
+    // user := &models.User{bson.NewObjectId(), username, pwd, 1}
     err := user.Save(c.MongoSession)
     if err != nil {
         panic(err)

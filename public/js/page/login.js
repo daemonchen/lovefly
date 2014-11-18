@@ -2,7 +2,7 @@ lovefly.controller('LoginController', function($scope, $http, $log, _) {
     $scope.logError = function(data, status) {
         $log.log('code ' + status + ': ' + data);
     };
-
+    $scope.refer = document.referrer;
     $scope.login = function() {
         return $http.get('/admin/login', {
             params: {
@@ -11,7 +11,7 @@ lovefly.controller('LoginController', function($scope, $http, $log, _) {
             }
         }).
         success(function() {
-            window.location.href = "/";
+             // window.location.href = $scope.refer;
         }).
         error($scope.logError);
     }
