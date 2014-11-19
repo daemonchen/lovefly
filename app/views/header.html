@@ -25,6 +25,8 @@
         <script type="text/livescript" src="/public/js/jquery-1.9.1.min.js"></script>
         <script type="text/livescript" src="/public/js/common.js"></script>
         <script type="text/livescript" src="/public/js/top.js"></script>
+        <script type="text/livescript" src="/public/js/yysweb_jQuery.js"></script>
+        <script type="text/livescript" src="/public/js/ddsmoothmenu.js"></script>
 
     <body ng-app="lovefly">
         <div id="header">
@@ -50,13 +52,13 @@
                     <div id="smoothmenu1" class="ddsmoothmenu">
                         <ul>
                             <li class="i_n01">
-                                <a href="/" class="navactive">
+                                <a href="/" class="{{if eq .controllerName "home"}}navactive{{end}}">
                                     <div class="menuimg"></div>
                                     <div class="menuword">首页</div>
                                 </a>
                             </li>
                             <li class="i_n02">
-                                <a href="/a/yuangongzhanshi/" class="nava">
+                                <a href="/a/yuangongzhanshi/" class="{{if eq .controllerName "news"}}navactive{{end}} nava">
                                     <div class="menuimg"></div>
                                     <div class="menuword">资讯</div>
                                 </a>
@@ -74,7 +76,7 @@
                                 </ul>
                             </li>
                             <li class="i_n03">
-                                <a href="/" class="nava">
+                                <a href="/" class=" {{if eq .controllerName "project"}}navactive{{end}} nava">
                                     <div class="menuimg"></div>
                                     <div class="menuword">培训项目</div>
                                 </a>
@@ -92,7 +94,7 @@
                                 </ul>
                             </li>
                             <li class="i_n04">
-                                <a href="/" class="nava">
+                                <a href="/" class="{{if eq .controllerName "student"}}navactive{{end}} nava">
                                     <div class="menuimg"></div>
                                     <div class="menuword">招生</div>
                                 </a>
@@ -105,7 +107,7 @@
                                 </ul>
                             </li>
                             <li class="i_n05">
-                                <a href="/" class="nava">
+                                <a href="/" class="{{if eq .controllerName "about"}}navactive{{end}} nava">
                                     <div class="menuimg"></div>
                                     <div class="menuword">关于</div>
                                 </a>

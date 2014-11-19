@@ -17,6 +17,6 @@ type List struct {
 }
 
 func (c List) Index() revel.Result {
-    controllerName := "list"
+    controllerName := "news"
     return c.Render(controllerName)
 }
