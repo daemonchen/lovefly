@@ -7,5 +7,6 @@ type Home struct {
 }
 
 func (c Home) Index() revel.Result {
-    return c.Render()
+    controllerName := "home"
+    return c.Render(controllerName)
 }
