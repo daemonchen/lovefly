@@ -11,7 +11,9 @@ lovefly.controller('LoginController', function($scope, $http, $log, _) {
             }
         }).
         success(function() {
-             // window.location.href = $scope.refer;
+            console.log("login success");
+            //TODO display userinfo on page
+            window.location.href = $scope.refer;
         }).
         error($scope.logError);
     }

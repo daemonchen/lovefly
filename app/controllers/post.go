@@ -10,7 +10,7 @@ import (
     // "github.com/revel/revel/cache"
     "io"
     // "labix.org/v2/mgo/bson"
-    // "fmt"
+    "fmt"
     "math/rand"
     "strconv"
     "time"
@@ -32,11 +32,11 @@ func (c *Post) generateSessionKey() []byte {
 func (c *Post) Index() revel.Result {
     controllerName := "home"
     isLogin := c.Session["islogin"]
-
     randNum := rand.Int63n(time.Now().Unix())
     hashKey := c.generateSessionKey()
     c.Session[string(hashKey[:])] = strconv.FormatInt(randNum, 10)
     CommentCache[strconv.FormatInt(randNum, 10)] = "true"
+    fmt.Println("post---")
     return c.Render(controllerName, isLogin)
 
 }

@@ -1,0 +1,30 @@
+{{set . "title" "Post"}}
+{{set . "controllerName" .controllerName}}
+{{append . "moreStyles" "/css/main.css"}}
+{{append . "moreScripts" "/public/js/lib/md5.js"}}
+{{append . "moreScripts" "/public/js/page/post.js"}}
+{{template "header.html" .}}
+<div class="content main container">
+    <div class="ui grid">
+        <div class="eleven wide column" ng-controller='PostController'>
+            <div class="ui segment">
+                <!-- title -->
+                {{template "common/spinner.html" .}}
+                <h2 class="ui">[[post.Title]]</h2>
+                <div class="ui divider"></div>
+                <h4 class="ui">[[time]]</h4>
+                {{if eq .isLogin "true"}}
+                <i class="edit icon" id="editor"></i>
+                <i class="delete icon" id="delete"></i>
+
+                {{end}}
+                <!-- content -->
+                <div ng-bind-html="post.Content"></div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+{{template "footer.html" .}}
