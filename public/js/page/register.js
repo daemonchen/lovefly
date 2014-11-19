@@ -6,10 +6,8 @@ lovefly.controller('RegisterController', function($scope, $http, $log, _) {
     $scope.register = function() {
         $log.log($scope.username);
         return $http.post('/admin/register', {
-            params: {
-                username: $scope.username,
-                password: $scope.password
-            }
+            username: $scope.username,
+            password: $scope.password
         }).
         success(function() {
 

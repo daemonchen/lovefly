@@ -9,7 +9,7 @@ import (
 
 type User struct {
     Id       bson.ObjectId `bson:"_id,omitempty"`
-    Name     string        `bson:"username"`
+    Username string        `bson:"username"`
     Password string        `bson:"password"`
     UserType int           `bson:"userType"`
     // Stamp string        `bson:"stamp"`
@@ -19,9 +19,9 @@ func Collection(s *mgo.Session) *mgo.Collection {
     return s.DB("lovefly").C("user")
 }
 
-func GetUserByName(s *mgo.Session, Name string) *User {
+func GetUserByName(s *mgo.Session, Username string) *User {
     b := new(User)
-    Collection(s).Find(bson.M{"username": Name}).One(b)
+    Collection(s).Find(bson.M{"username": Username}).One(b)
     return b
 }
 
