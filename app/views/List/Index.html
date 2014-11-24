@@ -3,9 +3,10 @@
 {{set . "title" "Home"}}
 {{append . "moreScripts" "/public/js/page/list.js"}}
 {{template "header.html" .}}
-<div class="main container" ng-controller='ListController'>
+<link rel="stylesheet" type="text/css" href="http://cdn.staticfile.org/semantic-ui/0.16.1/css/semantic.min.css">
+<div class="main container content" ng-controller='ListController'>
     <div class="ui grid">
-        <div class="eleven wide column">
+        <div class="sixteen wide column">
             <div class="ui segment">
                 {{template "common/spinner.html" .}}
                 <div ng-repeat='post in posts'>

@@ -4,9 +4,10 @@
 {{append . "moreScripts" "/public/js/lib/md5.js"}}
 {{append . "moreScripts" "/public/js/page/post.js"}}
 {{template "header.html" .}}
+<link rel="stylesheet" type="text/css" href="http://cdn.staticfile.org/semantic-ui/0.16.1/css/semantic.min.css">
 <div class="content main container">
     <div class="ui grid">
-        <div class="eleven wide column" ng-controller='PostController'>
+        <div class="sixteen wide column" ng-controller='PostController'>
             <div class="ui segment">
                 <!-- title -->
                 {{template "common/spinner.html" .}}
