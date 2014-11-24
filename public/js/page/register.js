@@ -11,7 +11,7 @@ lovefly.controller('RegisterController', function($scope, $http, $log, _) {
         }).
         success(function() {
 
-            window.location.href = $scope.refer;
+            // window.location.href = $scope.refer;
         }).
         error($scope.logError);
     }

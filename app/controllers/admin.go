@@ -29,6 +29,7 @@ func (c Admin) Index() revel.Result {
 func (c Admin) Login(username string, password string) revel.Result {
     responseJson := &Result{}
     user := models.GetUserByName(c.MongoSession, username)
+    fmt.Println(username)
     if password == user.Password {
         c.Response.Status = 200
         c.Session["islogin"] = "true"

@@ -11,10 +11,16 @@
             </div>
             <div class="field">
                 <i class="tag icon"></i>
-                <span id="tags" ng-repeat="t in tags track by $index">
+                <select ng-model='categoryId' ng-options='obj.name for obj in categories'>
+                    <option value="">请选择一级类目</option>
+                </select>
+                <select ng-model='subCategoryId' ng-options='subObj.name for subObj in categoryId.children'>
+                    <option value="">请选择二级类目</option>
+                </select>
+                <!-- <span id="tags" ng-repeat="t in tags track by $index">
                     <a href="/tag/getByTag?tag=[[t]]" target="_self">[[t]]</a>
-                </span>
-                <input type="text" placeholder="碎碎念" id="tag" ng-model="tag" ng-enter="addTag()" />
+                </span> -->
+                <!-- <input type="text" placeholder="碎碎念" id="tag" ng-model="tag" ng-enter="addTag()" /> -->
             </div>
             <div class="field">
                 <textarea id="content" name="content" rows="10" cols="80" ng-model="content" ng-change="setContent()">

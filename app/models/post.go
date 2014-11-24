@@ -9,10 +9,12 @@ import (
 
 type Post struct {
     // Id      bson.ObjectId          `bson:"_id,omitempty"`
-    Title   string                 `bson:"title"`
-    Content string                 `bson:"content"`
-    Stamp   string                 `bson:"stamp,omitempty"`
-    Meta    map[string]interface{} `bson:",omitempty"`
+    Title         string                 `bson:"title"`
+    Content       string                 `bson:"content"`
+    Stamp         string                 `bson:"stamp,omitempty"`
+    CategoryId    int                    `bson:"categoryId"`
+    SubCategoryId int                    `bson:"subCategoryId"`
+    Meta          map[string]interface{} `bson:",omitempty"`
 }
 
 func getPostsCollection(s *mgo.Session) *mgo.Collection {
