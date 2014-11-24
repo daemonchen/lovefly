@@ -82,38 +82,71 @@ lovefly.controller('EditorController', function($scope, $http, $log, _) {
             id: 13,
             name: '公司新闻',
             parentId: 1
+        }, {
+            id: 13,
+            name: '飞机介绍',
+            parentId: 1
+        }, {
+            id: 13,
+            name: '培训基础知识',
+            parentId: 1
+        }, {
+            id: 13,
+            name: '航空英语',
+            parentId: 1
         }]
     }, {
         id: 2,
         name: '培训',
         children: [{
-            id: 11,
+            id: 21,
             name: '私人执照飞行培训',
             parentId: 2
         }, {
-            id: 12,
-            name: 'test',
+            id: 22,
+            name: '仪器仪表执照培训',
             parentId: 2
         }, {
-            id: 13,
-            name: 'test',
+            id: 23,
+            name: '单引擎商业指导培训',
+            parentId: 2
+        }, {
+            id: 24,
+            name: '多引擎商业指导培训',
+            parentId: 2
+        }, {
+            id: 25,
+            name: 'FAA/EASA机构认证指导培训',
+            parentId: 2
+        }, {
+            id: 26,
+            name: '飞机维护培训',
             parentId: 2
         }]
     }, {
         id: 3,
         name: '招生',
         children: [{
-            id: 11,
+            id: 31,
             name: '学校招生报名页面',
             parentId: 3
+        }]
+    },
+    {
+        id: 4,
+        name: '关于',
+        children: [{
+            id: 41,
+            name: '公司简介',
+            parentId: 4
         }, {
-            id: 12,
-            name: 'test',
-            parentId: 3
+            id: 42,
+            name: '公司资质',
+            parentId: 4
         }, {
-            id: 13,
-            name: 'test',
-            parentId: 3
+            id: 43,
+            name: '公司文化',
+            parentId: 4
         }]
     }];
 

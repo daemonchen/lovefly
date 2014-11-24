@@ -27,8 +27,7 @@ lovefly.controller('ListController', function($scope, $http, $log, _){
             });
             $scope.posts = data;
             $scope.loading = false;
-
-        };
+        }
       }).
       error(logError);
   };
