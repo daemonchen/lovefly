@@ -54,6 +54,11 @@ func GetAllPosts(s *mgo.Session) (posts []*Post) {
     return
 }
 
+func GetPostsList(s *mgo.Session, categoryId string, subCategoryId string) (posts []*Post) {
+    getPostsCollection(s).Find(bson.M{"categoryId": categoryId, "subCategoryId": subCategoryId}).Sort("-stamp").All(&posts)
+    return
+}
+
 func GetPostByStamp(s *mgo.Session, stamp string) (p *Post) {
     getPostsCollection(s).Find(bson.M{"stamp": stamp}).One(&p)
     p.Content = string(blackfriday.MarkdownBasic([]byte(p.Content)))

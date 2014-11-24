@@ -5,14 +5,18 @@ lovefly.controller('ListController', function($scope, $http, $log, _){
   for (var i = urlParams.length - 1; i >= 0; i--) {
       urlParamsMap[urlParams[i].split("=")[0]] = urlParams[i].split("=")[1];
   };
-  $scope.tag = urlParamsMap["tag"];
+  $scope.categoryId = urlParamsMap["categoryId"];
+  $scope.subCategoryId = urlParamsMap["subCategoryId"];
 
   var logError = function(data, status) {
     $log.log('code '+status+': '+data);
   };
   $scope.loading = true;
   var init = function() {
-    return $http.get('/tag/getTagsByTag',{params: {tag: $scope.tag }}).
+    return $http.get('/list/getPostsList',{params: {
+      categoryId: $scope.categoryId,
+      subCategoryId: $scope.subCategoryId
+     }}).
       success(function(data) {
         $log.info("data:",data)
         if (!!data && data.length != 0 && data != "null") {
