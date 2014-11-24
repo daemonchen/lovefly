@@ -1,5 +1,12 @@
 lovefly.controller('EditorController', function($scope, $http, $log, _) {
 
+    if (location.href.indexOf("stamp") > 0) {
+      var urlParams = location.href.split("?")[1].split("&");
+      var urlParamsMap = {};
+      for (var i = urlParams.length - 1; i >= 0; i--) {
+          urlParamsMap[urlParams[i].split("=")[0]] = urlParams[i].split("=")[1];
+      };
+    };
     $scope.logError = function(data, status) {
         $log.log('code ' + status + ': ' + data);
     };
@@ -113,8 +120,8 @@ lovefly.controller('EditorController', function($scope, $http, $log, _) {
     var pageUtil = {
         init: function() {
             // $log.info($scope.islogin);
-            $scope.stamp = urlParamsMap["stamp"];
-            if (!!$scope.stamp) {
+            if (!!urlParamsMap) {
+                $scope.stamp = urlParamsMap["stamp"];
                 this.getPost();//进入编辑文章流程
             };
         },
@@ -129,8 +136,8 @@ lovefly.controller('EditorController', function($scope, $http, $log, _) {
                 if (!!data && data.length != 0 && data != "null") {
                     $scope.title = data.Title;
                     $scope.content = data.Content;
-                    $scope.categoryId = $scope.categories.find({"id": data.CategoryId});
-                    $scope.subCategoryId = $scope.categoryId.children.find({"id": data.SubCategoryId});
+                    $scope.categoryId = _.find($scope.categories, function(item){return item.id == data.CategoryId});
+                    $scope.subCategoryId = _.find($scope.categoryId.children, function(item){return item.id == data.SubCategoryId});
                 };
             }).
             error($scope.logError);

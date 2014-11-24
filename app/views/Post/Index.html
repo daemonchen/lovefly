@@ -14,8 +14,10 @@
                 <div class="ui divider"></div>
                 <h4 class="ui">[[time]]</h4>
                 {{if eq .isLogin "true"}}
-                <i class="edit icon" id="editor"></i>
-                <i class="delete icon" id="delete"></i>
+                <i class="edit icon" id="editor">
+                    <a href="/edit/index?stamp=[[post.Stamp]]">edit</a>
+                </i>
+                <!-- <i class="delete icon" id="delete">delete</i> -->
 
                 {{end}}
                 <!-- content -->
