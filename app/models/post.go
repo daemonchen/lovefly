@@ -54,7 +54,7 @@ func GetAllPosts(s *mgo.Session) (posts []*Post) {
     return
 }
 
-func GetPostsList(s *mgo.Session, categoryId string, subCategoryId string) (posts []*Post) {
+func GetPostsList(s *mgo.Session, categoryId int, subCategoryId int) (posts []*Post) {
     getPostsCollection(s).Find(bson.M{"categoryId": categoryId, "subCategoryId": subCategoryId}).Sort("-stamp").All(&posts)
     return
 }
