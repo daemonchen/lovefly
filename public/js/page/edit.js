@@ -39,25 +39,6 @@ lovefly.controller('EditorController', function($scope, $http, $log, _) {
 
     };
 
-    $scope.saveTags = function(result) {
-        $scope.stamp = result.Stamp
-        if ($scope.tags.length == 0) {
-            return $scope.clean();
-        };
-        for (var i = $scope.tags.length - 1; i >= 0; i--) {
-            $scope.saveTag($scope.tags[i]);
-        };
-    };
-    $scope.saveTag = function(tag) {
-        $http.post('/tag/save', {
-            title: $scope.title,
-            stamp: $scope.stamp,
-            tag: tag
-        }).
-        error($scope.logError).
-        success($scope.clean);
-
-    };
     $scope.clean = function(result) {
         $scope.stamp = result.Stamp
         window.location.href = "/post/index?stamp=" + $scope.stamp;
@@ -67,6 +48,7 @@ lovefly.controller('EditorController', function($scope, $http, $log, _) {
     // bind click event on submit btn
     $scope.sendPost = function() {
         return $http.post('/edit/post', {
+            stamp: $scope.stamp,
             title: $scope.title,
             content: $scope.content,
             categoryId: $scope.categoryId.id,
@@ -127,5 +109,35 @@ lovefly.controller('EditorController', function($scope, $http, $log, _) {
             parentId: 3
         }]
     }];
+
+    var pageUtil = {
+        init: function() {
+            // $log.info($scope.islogin);
+            $scope.stamp = urlParamsMap["stamp"];
+            if (!!$scope.stamp) {
+                this.getPost();//进入编辑文章流程
+            };
+        },
+        getPost: function() {
+            var self = this;
+            $http.get('/post/getPostByStamp', {
+                params: {
+                    stamp: $scope.stamp
+                }
+            }).
+            success(function(data) {
+                if (!!data && data.length != 0 && data != "null") {
+                    $scope.title = data.Title;
+                    $scope.content = data.Content;
+                    $scope.categoryId = $scope.categories.find({"id": data.CategoryId});
+                    $scope.subCategoryId = $scope.categoryId.children.find({"id": data.SubCategoryId});
+                };
+            }).
+            error($scope.logError);
+
+        }
+
+    }
+    pageUtil.init();
 
 })

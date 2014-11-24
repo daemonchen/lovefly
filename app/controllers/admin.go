@@ -33,6 +33,7 @@ func (c Admin) Login(username string, password string) revel.Result {
     if password == user.Password {
         c.Response.Status = 200
         c.Session["islogin"] = "true"
+        c.Session["userInfo"] = fmt.Sprint(user)
         return c.RenderJson(responseJson)
     } else {
         responseJson = &Result{"caicaikana", "login failed"}

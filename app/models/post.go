@@ -2,6 +2,7 @@ package models
 
 import (
     // "encoding/json"
+    "fmt"
     "github.com/russross/blackfriday"
     "labix.org/v2/mgo"
     "labix.org/v2/mgo/bson"
@@ -12,6 +13,7 @@ type Post struct {
     Title         string                 `bson:"title"`
     Content       string                 `bson:"content"`
     Stamp         string                 `bson:"stamp,omitempty"`
+    UpdateTime    string                 `bson:"updateTime,omitempty"`
     CategoryId    int                    `bson:"categoryId"`
     SubCategoryId int                    `bson:"subCategoryId"`
     Meta          map[string]interface{} `bson:",omitempty"`
@@ -55,7 +57,15 @@ func GetAllPosts(s *mgo.Session) (posts []*Post) {
 }
 
 func GetPostsList(s *mgo.Session, categoryId int, subCategoryId int) (posts []*Post) {
-    getPostsCollection(s).Find(bson.M{"categoryId": categoryId, "subCategoryId": subCategoryId}).Sort("-stamp").All(&posts)
+    fmt.Println("subCate", subCategoryId)
+    if categoryId == 0 {
+        getPostsCollection(s).Find(nil).Sort("-stamp").All(&posts)
+    } else if subCategoryId == 0 {
+        getPostsCollection(s).Find(bson.M{"categoryId": categoryId}).Sort("-stamp").All(&posts)
+
+    } else {
+        getPostsCollection(s).Find(bson.M{"categoryId": categoryId, "subCategoryId": subCategoryId}).Sort("-stamp").All(&posts)
+    }
     return
 }
 

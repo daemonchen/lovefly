@@ -9,6 +9,7 @@ import (
     "github.com/russross/blackfriday"
     // "html/template"
     "encoding/json"
+    "fmt"
     "strconv"
     "time"
 )
@@ -27,11 +28,15 @@ func (c Edit) Index() revel.Result {
 
 }
 func (c *Edit) Post(post *models.Post) revel.Result {
-    post.Stamp = strconv.FormatInt(time.Now().UnixNano()/1e6, 10)
 
     decoder := json.NewDecoder(c.Request.Body)
     decoder.Decode(&post)
-
+    fmt.Println("stamp-------", post.Stamp)
+    if post.Stamp != "" {
+        post.UpdateTime = strconv.FormatInt(time.Now().UnixNano()/1e6, 10)
+    } else {
+        post.Stamp = strconv.FormatInt(time.Now().UnixNano()/1e6, 10)
+    }
     err := post.Save(c.MongoSession)
     if err != nil {
         panic(err)
