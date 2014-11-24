@@ -10,8 +10,8 @@ lovefly.controller('RegisterController', function($scope, $http, $log, _) {
             password: $scope.password
         }).
         success(function() {
-
-            // window.location.href = $scope.refer;
+            alert("register success");
+            window.location.href = $scope.refer;
         }).
         error($scope.logError);
     }
