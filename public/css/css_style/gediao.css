@@ -147,9 +147,10 @@ DIV.content_page SPAN {
 	margin-bottom: 40px;
 }
 #header .logo {
-	float: left;
 	height: 90px;
-	position: relative;
+	position: absolute;
+	left: 0;
+	top: 12px;
 }
 
 #top_navigation {
@@ -228,7 +229,7 @@ DIV.content_page SPAN {
 }
 /*header menu*/
 #Navigation {
-	width:511px;
+	width:613px;
 	display:block;
 	float: right;
 }

@@ -19,13 +19,14 @@ list-style-type: none;
 .i_n03 a .menuimg{ background:url(/public/img/nav_icoC.png) no-repeat; width:51px; height:43px;}
 .i_n04 a .menuimg{ background:url(/public/img/nav_icoD.png) no-repeat; width:51px; height:43px;}
 .i_n05 a .menuimg{ background:url(/public/img/nav_icoE.png) no-repeat; width:51px; height:43px;}
+.i_n06 a .menuimg{ background:url(/public/img/nav_icoE.png) no-repeat; width:51px; height:43px;}
 .menuword{ color:#fff; text-align:right; padding-right:13px;font-family:"微软雅黑"; font-size:16px; padding-top:5px;}
 
 .ddsmoothmenu ul li{ position:relative;float:left; text-align:right;  width:101px;background: url(/public/img/bgcolor.png) repeat 0px 0px;height: 88px;border-left: 1px solid #FFFFFF;}
 .nava{ height:88px;  color:#FFF; display:block;text-align:right}
 * html .nava{ /*IE6 hack to get sub menu links to behave correctly*/display: inline-block; height:88px;}
 .navactive,.navactive:hover,.nava:hover,.nava.selected{ display:block; height:88px; color:#FFF; text-decoration:none;background: url(/public/img/meng_hover.gif) repeat;}
-.i_n01 .navactive,.i_n02 .navactive,.i_n03 .navactive,.i_n04 .navactive,.i_n05 .navactive{background:url(/public/img/navhover_bg.gif) repeat;}
+.i_n01 .navactive,.i_n02 .navactive,.i_n03 .navactive,.i_n04 .navactive,.i_n05 .navactive,.i_n06 .navactive{background:url(/public/img/navhover_bg.gif) repeat;}
 .i_nav ul li ul{
 position: absolute;padding-left:0px;
 
