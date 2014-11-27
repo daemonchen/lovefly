@@ -13,7 +13,8 @@ lovefly.controller('LoginController', function($scope, $http, $log, _) {
         success(function() {
             console.log("login success");
             //TODO display userinfo on page
-            window.location.href = $scope.refer;
+            // window.location.href = $scope.refer;
+            window.location.href = '/edit/index';
         }).
         error($scope.logError);
     }
