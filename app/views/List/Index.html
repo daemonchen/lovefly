@@ -1,6 +1,7 @@
 {{set . "controllerName" .controllerName}}
 {{set . "title" "Home"}}
 {{append . "moreScripts" "/public/js/page/list.js"}}
+{{append . "moreScripts" "/public/js/page/category.js"}}
 {{template "header.html" .}}
 <!-- <div class="content" id="com_thenm_banner" editok="online">
     <a class="pimg_banner">
@@ -14,13 +15,13 @@
 </div>
 <div class="sub-kong"></div>
 <div class="content">
-    <div id="menu">
+    <div id="menu" ng-controller="CategoryController">
         <div class="sidebar" id="com_sort_products" editok="online">
             <div id="smoothmenu2" class="leftlist">
                 <div class="sidebar_l">
-                    <ul class="sortnavul">
+                    <ul class="sortnavul" ng-repeat="subCategory in subCategories">
                         <li class="sortnavli">
-                            <a href="/plus/list.php?tid=14" class="sortnava">公司新闻</a>
+                            <a href="/list/index?categoryId=[[categoryId]]&subCategoryId=[[subCategory.id]]" class="sortnava">[[subCategory.name]]</a>
                         </li>
                     </ul>
                 </div>

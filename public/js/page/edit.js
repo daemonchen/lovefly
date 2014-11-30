@@ -157,7 +157,7 @@ lovefly.controller('EditorController', function($scope, $http, $log, _) {
         name: '关于',
         children: [{
             id: 51,
-            name: '关于',
+            name: '公司介绍',
             parentId: 5
         }]
     }];
