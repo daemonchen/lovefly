@@ -23,7 +23,8 @@ func (c List) Index(categoryId int) revel.Result {
         1:  "news",
         2:  "project",
         3:  "student",
-        4:  "about"}
+        4:  "club",
+        5:  "about"}
     controllerName := "news"
     if categoryId > 0 {
         controllerName = controllerNameMap[categoryId]
