@@ -104,23 +104,19 @@ lovefly.controller('EditorController', function($scope, $http, $log, _) {
             parentId: 2
         }, {
             id: 23,
-            name: '商业飞行执照',
-            parentId: 2,
-            children: [{
-                id: 231,
-                name: '单引擎商业飞行执照',
-                parentId: 23
-            }, {
-                id: 232,
-                name: '多引擎商业飞行执照',
-                parentId: 23
-            }]
+            name: '单引擎商业飞行执照',
+            parentId: 2
         }, {
             id: 24,
-            name: '多引擎飞行执照',
+            name: '多引擎商业飞行执照',
             parentId: 2
         }, {
             id: 25,
+            name: '多引擎飞行执照',
+            parentId: 2
+        },
+        , {
+            id: 26,
             name: '飞行维护培训',
             parentId: 2
         }]
@@ -134,6 +130,10 @@ lovefly.controller('EditorController', function($scope, $http, $log, _) {
         }, {
             id: 33,
             name: '招生代理',
+            parentId: 3
+        }, {
+            id: 34,
+            name: '助学贷款',
             parentId: 3
         }]
     }, {

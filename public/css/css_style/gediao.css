@@ -602,7 +602,7 @@ DIV.content_page SPAN {
 	background-color: #c6c647;
 	background-image: url(/public/img/ind_yey_25.png);
 	background-repeat: no-repeat;
-	background-position: 174px 24px;
+	background-position: 33px 24px;
 }
 #mainrtB #software:hover {
 	background-color: #CCCC5B;
@@ -630,7 +630,7 @@ DIV.content_page SPAN {
 	background-color: #9eb6ac;
 	background-image: url(/public/img/ind_yey_22.png);
 	background-repeat: no-repeat;
-	background-position: 174px 24px;
+	background-position: 33px 24px;
 }
 #mainrtB #figure:hover {
 	background-color: #ACC1B9;
@@ -664,7 +664,7 @@ DIV.content_page SPAN {
 	background-color: #F79A0F;
 	cursor:hand;
 }
-#mainrtB #service h1 {
+#mainrtB h1 {
 	font-size: 24px;
 	font-weight: normal;
 	font-family: "微软雅黑";
@@ -672,14 +672,14 @@ DIV.content_page SPAN {
 	padding-right: 23px;
 	text-align: right;
 }
-#mainrtB #service h1 a {
+#mainrtB  h1 a {
 	color: #FFFFFF;
 	line-height: 24px;
 }
-#mainrtB #service h1 a:hover {
+#mainrtB  h1 a:hover {
 	color: #FFFFFF;
 }
-#mainrtB #service h2 {
+#mainrtB  h2 {
 	font-size: 14px;
 	font-weight: normal;
 	text-transform: capitalize;
