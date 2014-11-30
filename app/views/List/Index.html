@@ -1,24 +1,53 @@
 {{set . "controllerName" .controllerName}}
-{{append . "moreStyles" "/css/main.css"}}
 {{set . "title" "Home"}}
 {{append . "moreScripts" "/public/js/page/list.js"}}
 {{template "header.html" .}}
-<link rel="stylesheet" type="text/css" href="http://cdn.staticfile.org/semantic-ui/0.16.1/css/semantic.min.css">
 <!-- <div class="content" id="com_thenm_banner" editok="online">
     <a class="pimg_banner">
         <img src="http://www.whyyjzgs.com/upload/201408/1407922714.jpg" style="border:0px;width:1000px;height:267px">
     </a>
 </div> -->
-<div class="main container content" ng-controller='ListController'>
-    {{template "common/spinner.html" .}}
-    <div class="ui animated big list">
-        <div class="item" ng-repeat='post in posts'>
-            <i class="right triangle icon"></i>
-            <a href="/post/index?stamp=[[post.Stamp]]">[[post.Title]]</a>
-            <div class="right-icon">
-                <i class="time icon"></i>[[post.Date]]
+<div class="content" id="com_thenm_banner" editok="online">
+    <a href="#">
+        <img src="http://www.gjfxypx.com/uploads/131207/1-13120F2292I11.png" width="1000" height="296" alt="">
+    </a>
+</div>
+<div class="sub-kong"></div>
+<div class="content">
+    <div id="menu">
+        <div class="sidebar" id="com_sort_products" editok="online">
+            <div id="smoothmenu2" class="leftlist">
+                <div class="sidebar_l">
+                    <ul class="sortnavul">
+                        <li class="sortnavli">
+                            <a href="/plus/list.php?tid=14" class="sortnava">公司新闻</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+    <div class="sub-mid" ng-controller='ListController'>
+        <div id="com_thenm_list" editok="online" class="content">
+            <div id="statusid" class="xweb-ajaxmsg">
+            </div>
+            <div id="xweb-ajax-div" class="xweb-ajaxdiv">
+                {{template "common/spinner.html" .}}
+                <ul class="n_n_list" ng-repeat='post in posts'>
+                    <li>
+                        <a href="/post/index?stamp=[[post.Stamp]]">[[post.Title]]</a>
+                        <span>[[post.Date]]</span>
+                    </li>
+                </ul>
+                <div class="navPage pagebar">
+                    <ul>
+                        <li><span class="pageinfo">共 1 页/[[posts.length]] 条记录</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="kongHight">
 </div>
 {{template "footer.html" .}}
