@@ -22,8 +22,25 @@ type Result struct {
 }
 
 func (c Admin) Index() revel.Result {
+    if c.Session["islogin"] == "true" {
+        return c.Redirect(Edit.Index)
+    }
     return c.Render()
 
+}
+func (c Admin) Logout() revel.Result {
+    c.Session["islogin"] = "false"
+    c.Session["userName"] = ""
+    return c.Redirect(Admin.Index)
+}
+func (c Admin) Application() revel.Result {
+    if c.Session["islogin"] != "true" {
+        return c.Redirect(Admin.Index)
+    }
+    controllerName := "admin"
+    username := c.Session["userName"]
+    fmt.Println("username", username)
+    return c.Render(controllerName, username)
 }
 
 func (c Admin) Login(username string, password string) revel.Result {
@@ -33,12 +50,14 @@ func (c Admin) Login(username string, password string) revel.Result {
     if password == user.Password {
         c.Response.Status = 200
         c.Session["islogin"] = "true"
-        c.Session["userInfo"] = fmt.Sprint(user)
+        fmt.Println("username---", user.Username)
+        c.Session["userName"] = user.Username
         return c.RenderJson(responseJson)
     } else {
         responseJson = &Result{"caicaikana", "login failed"}
         c.Response.Status = 403
         c.Session["islogin"] = "false"
+        c.Session["userName"] = ""
         return c.RenderJson(responseJson)
 
     }
@@ -56,6 +75,8 @@ func (c Admin) Register(user *models.User) revel.Result {
         panic(err)
         return c.RenderJson(&Result{"failed", "err"})
     } else {
+        c.Session["islogin"] = "true"
+        c.Session["userName"] = user.Username
         revel.INFO.Println("register success")
         return c.RenderJson(&Result{"success", "register"})
     }

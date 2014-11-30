@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>lovefly-{{.title}}</title>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/x-icon" href="/public/img/favicon.ico.png">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        {{range .moreStyles}}
+        <link rel="stylesheet" type="text/css" href="/public/{{.}}">
+        {{end}}
+        <link rel="alternate" type="application/rss+xml" title="lovefly" href="/rss/">
+        <link rel="canonical" href="http://www.lovefly.com/">
+        <base target="_blank">
+        <meta name="keywords" content="" />
+        <meta name="description" content="lovefly">
+        <link rel="shortcut icon" href="" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="/public/css/admin/admin.css" />
+
+
+    <body ng-app="lovefly">
+        <header class="header" ng-controller="AdminController">
+            <div class="container clearfix">
+                <div class="logo"><a href="/">爱飞网管理后台</a></div>
+                <nav class="clearfix">
+                    <ul>
+                        <li data-display="1"><a href="/edit/index">新闻发布</a></li>
+                        <li data-display="1"><a href="/admin/application">学员申请列表</a></li>
+                    </ul>
+                </nav>
+                {{if .username}}
+                    {{if ne .username ""}}
+                        <div class="px-username">
+                            <span class="px-loginid">{{.username}}</span>，你好！
+                            <a href='/admin/logout' style="color:white;">退出</a>
+                        </div>
+                    {{end}}
+                {{else}}
+                    <div class="px-username">
+                        <a href='/admin/index' style="color:white;">登录/注册</a>
+                    </div>
+                {{end}}
+            </div>
+        </header>
+

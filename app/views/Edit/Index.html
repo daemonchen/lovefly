@@ -1,9 +1,9 @@
 {{set . "title" "Edit"}}
 {{set . "controllerName" .controllerName}}
 {{append . "moreScripts" "/public/js/page/edit.js"}}
-{{template "header.html" .}}
+{{template "admin/header.html" .}}
 <link rel="stylesheet" type="text/css" href="http://cdn.staticfile.org/semantic-ui/0.16.1/css/semantic.min.css">
-<div class="content">
+<div class="content" style="padding-top:20px;">
     <div class="main container" ng-controller='EditorController'>
         <div class="ui form">
             <div class="field">
@@ -35,4 +35,4 @@
         </div>
     </div>
 </div>
-{{template "footer.html" .}}
+{{template "admin/footer.html" .}}

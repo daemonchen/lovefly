@@ -1,4 +1,4 @@
-lovefly.controller('RegisterController', function($scope, $http, $log, _) {
+lovefly.controller('RegisterController', function($scope, $http, $log, _, $cookieStore) {
     $scope.logError = function(data, status) {
         $log.log('code ' + status + ': ' + data);
     };
@@ -10,6 +10,7 @@ lovefly.controller('RegisterController', function($scope, $http, $log, _) {
             password: $scope.password
         }).
         success(function() {
+            $cookieStore.put("username", $scope.username);
             alert("register success");
             // window.location.href = $scope.refer;
             window.location.href = 'edit/index';

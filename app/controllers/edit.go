@@ -24,7 +24,9 @@ func (c Edit) Index() revel.Result {
         return c.Redirect(Admin.Index)
     }
     controllerName := "edit"
-    return c.Render(controllerName)
+    username := c.Session["userName"]
+    fmt.Println("username", username)
+    return c.Render(controllerName, username)
 
 }
 func (c *Edit) Post(post *models.Post) revel.Result {

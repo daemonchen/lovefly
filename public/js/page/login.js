@@ -1,4 +1,4 @@
-lovefly.controller('LoginController', function($scope, $http, $log, _) {
+lovefly.controller('LoginController', function($scope, $http, $log, _, $cookieStore) {
     $scope.logError = function(data, status) {
         $log.log('code ' + status + ': ' + data);
     };
@@ -12,6 +12,7 @@ lovefly.controller('LoginController', function($scope, $http, $log, _) {
         }).
         success(function() {
             console.log("login success");
+            $cookieStore.put("username", $scope.username);
             //TODO display userinfo on page
             // window.location.href = $scope.refer;
             window.location.href = '/edit/index';

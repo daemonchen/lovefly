@@ -3,7 +3,7 @@ underscore.factory('_', function() {
     return window._;
 });
 
-var lovefly = angular.module("lovefly", ["underscore", "ngSanitize"])
+var lovefly = angular.module("lovefly", ["underscore", "ngSanitize", "ngCookies"])
     .config(function($interpolateProvider) {
         $interpolateProvider.startSymbol('[[');
         $interpolateProvider.endSymbol(']]');
