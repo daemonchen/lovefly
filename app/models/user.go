@@ -15,23 +15,23 @@ type User struct {
     // Stamp string        `bson:"stamp"`
 }
 
-func Collection(s *mgo.Session) *mgo.Collection {
+func getUsersCollection(s *mgo.Session) *mgo.Collection {
     return s.DB("lovefly").C("user")
 }
 
 func GetUserByName(s *mgo.Session, Username string) *User {
     b := new(User)
-    Collection(s).Find(bson.M{"username": Username}).One(b)
+    getUsersCollection(s).Find(bson.M{"username": Username}).One(b)
     return b
 }
 
 func (b *User) Save(s *mgo.Session) error {
     fmt.Println("start save user info")
     // fmt.Println(Collection(s))
-    _, err := Collection(s).Upsert(bson.M{"_id": b.Id}, b)
+    _, err := getUsersCollection(s).Upsert(bson.M{"_id": b.Id}, b)
     return err
 }
 
 func (b *User) Delete(s *mgo.Session) error {
-    return Collection(s).RemoveId(b.Id)
+    return getUsersCollection(s).RemoveId(b.Id)
 }

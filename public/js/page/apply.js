@@ -3,16 +3,46 @@ lovefly.controller('ApplyController', function($scope, $http, $log, _) {
         $log.log('code ' + status + ': ' + data);
     };
     $scope.doSubmit = function() {
-        $log.log($scope.username);
         return $http.post('/apply/save', {
-            username: $scope.username,
-            password: $scope.password
+            name: $scope.name,
+            phone: $scope.phone,
+            email: $scope.email,
+            address: $scope.address,
+            courseType: $scope.courseType,
+            gender: $scope.gender,
+            bornAddress: $scope.bornAddress,
+            birthday: $scope.birthday,
+            eduBackground: $scope.eduBackground,
+            major: $scope.major,
+            graduationTime: $scope.graduationTime,
+            englishLevel: $scope.englishLevel,
+            tall: $scope.tall,
+            weight: $scope.weight,
+            caseHistory: $scope.caseHistory
         }).
         success(function() {
-            alert("register success");
+            alert("submit success");
             // window.location.href = $scope.refer;
-            window.location.href = 'edit/index';
+            window.location.href = '/';
         }).
         error($scope.logError);
+    };
+    $scope.doReset = function(){
+        $scope.name = "";
+        $scope.phone = "";
+        $scope.email = "";
+        $scope.address = "";
+        $scope.courseType = "";
+        $scope.gender = "";
+        $scope.bornAddress = "";
+        $scope.birthday = "";
+        $scope.eduBackground ="";
+        $scope.major = "";
+        $scope.graduationTime = "";
+        $scope.englishLevel = "";
+        $scope.tall = "";
+        $scope.weight = "";
+        $scope.caseHistory = "";
+        console.log("reset");
     }
 });
