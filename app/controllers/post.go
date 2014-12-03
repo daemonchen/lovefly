@@ -3,8 +3,8 @@ package controllers
 import (
     // "encoding/json"
     "crypto/md5"
-    "github.com/jgraham909/revmgo"
     "github.com/revel/revel"
+    "github.com/revmgo"
     "lovefly/app/models"
     "lovefly/app/util"
     // "github.com/revel/revel/cache"

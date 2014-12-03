@@ -3,8 +3,8 @@ package controllers
 import (
     "lovefly/app/models"
     // "fmt"
-    "github.com/jgraham909/revmgo"
     "github.com/revel/revel"
+    "github.com/revmgo"
     // "gopkg.in/mgo.v2/bson"
     "github.com/russross/blackfriday"
     // "html/template"
