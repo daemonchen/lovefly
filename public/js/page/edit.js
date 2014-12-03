@@ -115,7 +115,7 @@ lovefly.controller('EditorController', function($scope, $http, $log, _) {
             name: '多引擎飞行执照',
             parentId: 2
         },
-        , {
+        {
             id: 26,
             name: '飞行维护培训',
             parentId: 2
