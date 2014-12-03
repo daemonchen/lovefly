@@ -9,7 +9,7 @@ import (
     "lovefly/app/util"
     // "github.com/revel/revel/cache"
     "io"
-    // "labix.org/v2/mgo/bson"
+    // "gopkg.in/mgo.v2/bson"
     "fmt"
     "math/rand"
     "strconv"
