@@ -13,7 +13,7 @@ lovefly.controller('RegisterController', function($scope, $http, $log, _, $cooki
             $cookieStore.put("username", $scope.username);
             alert("register success");
             // window.location.href = $scope.refer;
-            window.location.href = 'edit/index';
+            window.location.href = '/edit/index';
         }).
         error($scope.logError);
     }
