@@ -65,7 +65,7 @@ lovefly.controller('PostController', function($scope, $http, $log, _) {
                     $scope.time = moment(parseInt(data.Stamp)).format("YYYY年MM月DD日  HH:mm:ss");
                     $scope.post = data;
                     $scope.loading = false;
-                    self.getComments();
+                    // self.getComments();
 
                 };
             }).
