@@ -48,18 +48,19 @@ func (c *Post) GetPostByStamp(stamp string) revel.Result {
 }
 func (c *Post) Delete(stamp string) revel.Result {
     // controllerName := "home"
+    fmt.Println("...", stamp)
     if isLogin := c.Session["islogin"]; isLogin == "true" {
         err := models.DeletePost(c.MongoSession, stamp)
         if err != nil {
             panic(err)
         }
     }
-    return c.RenderJson(&util.Message{"success update"})
+    return c.RenderJson(&util.Message{"success delete"})
 }
 
 func (c *Post) Update(stamp string, content string) revel.Result {
     revel.WARN.Println("commentData host:", c.Request.RemoteAddr)
-    responseJson := &util.Message{"success delete"}
+    responseJson := &util.Message{"success update"}
     err := models.UpdatePost(c.MongoSession, stamp, content)
     if err != nil {
         revel.WARN.Println("occur err when update:", err)

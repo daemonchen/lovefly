@@ -43,6 +43,14 @@ lovefly.controller('PostController', function($scope, $http, $log, _) {
             pageUtil.getComments()
         });
     }
+    $scope.deletePost = function() {
+        $http.delete('/post/delete?stamp=' + $scope.stamp).
+        error($scope.logError).
+        success(function(res){
+            alert(JSON.stringify(res));
+            window.location.href = '/edit/index';
+        });
+    }
 
     $scope.logError = function(data, status) {
         $log.log('code ' + status + ': ' + data);
