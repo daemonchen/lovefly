@@ -6,16 +6,15 @@ body {
 	padding: 0px;
 	font-size: 0px;
 	line-height: 0px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti !important;
 }
 div {
-	font-size:12px;
+	font-size:14px;
 	line-height:1.8em;
 	margin:0px;
 	padding:0px;
 	color:#6d6d6d;
 	text-align: left;
-	font-family: Arial, Helvetica, sans-serif;
 }
 div, h1, h2, h3, h4, h5, h6, dl, ul, dt, dd, li, img, span, form, p, input {
 	margin:0px;
@@ -2559,25 +2558,6 @@ DIV.content_page SPAN {
 
 
 
-/*百度地图*/
-.iw_poi_title {
-	color:#CC5522;
-	font-size:14px;
-	font-weight:bold;
-	overflow:hidden;
-	padding-right:13px;
-	white-space:nowrap
-}
-.iw_poi_content {
-	font:12px arial, sans-serif;
-	overflow:visible;
-	padding-top:4px;
-	white-space:-moz-pre-wrap;
-	word-wrap:break-word
-}
-
-
-
 /*返回顶部*/
 #elevator_item {
 	width:60px;
@@ -2619,69 +2599,14 @@ DIV.content_page SPAN {
 }
 /*返回顶部结束*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.zt-case-wrap {
-	width:307px;
-	height:247px;
-	position:relative;
-	overflow:hidden;
+/*内容列表样式*/
+#com_thenm_list ol li{
+	list-style-type: decimal;
+	font-weight: bold;
 }
-.zt-case-wrap img {
-	height: 247px;
-	width: 307px;
-	display: block;
+#com_thenm_list blockquote p{
+	padding: 10px 0;
 }
-.zt-case-wrap div {
-	width:307px;
-	height:247px;
-	position:absolute;
-	left:0;
-	top:0;
-	background:url(trans.gif);
-	padding-top: 247px;
-	cursor:hand;
-}
-.zt-case-wrap div b {
-	display:block;
-	width:307px;
-	height:247px;
-	position:absolute;
-	top:247px;
-	z-index:1;
-	filter: alpha(opacity=46);
- filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
-	opacity:0.40;
-	background-color: #a3a743;
-}
-.zt-case-wrap div span {
-	position:relative;
-	z-index:500;
-}
-.zt-case-wrap div span font {
-	display: block;
-	background-image: url(/public/img/subcase_hover.png);
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	position: absolute;
-	height: 246px;
-	width: 307px;
-}
+#com_thenm_list a,#com_thenm_list a:visited{
+	color: #ff7300;
+};
