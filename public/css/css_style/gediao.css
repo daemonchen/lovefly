@@ -10,7 +10,7 @@ body {
 }
 div {
 	font-size:14px;
-	line-height:1.8em;
+	line-height:1.5;
 	margin:0px;
 	padding:0px;
 	color:#6d6d6d;
@@ -2604,9 +2604,17 @@ DIV.content_page SPAN {
 	list-style-type: decimal;
 	font-weight: bold;
 }
-#com_thenm_list blockquote p{
+#com_thenm_list p{
 	padding: 10px 0;
 }
 #com_thenm_list a,#com_thenm_list a:visited{
 	color: #ff7300;
-};
+}
+#com_thenm_list a:hover{
+	color: #e74309;
+}
+#com_thenm_list p img{
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
