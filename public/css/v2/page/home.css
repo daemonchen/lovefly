@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+
+.kv
+{
+clear:both;
+position:relative;
+width:100%;
+height:auto;
+overflow:hidden;
+}
+.banner
+{
+clear:both;
+position:absolute;
+width:100%;
+height:397px;
+overflow:hidden;
+top:0;
+left:100%;
+background:#fff;
+}
+.banner a img
+{
+width:100%;
+height:auto;
+}
+.advance_banner
+{
+clear:both;
+position:relative;
+width:100%;
+overflow:hidden;
+margin-top:30px;
+padding:23px 0 10px 0;
+background:#f1f1f1;
+}
+.advance_banner li
+{
+position:relative;
+display:inline;
+float:left;
+width:13%;
+height:auto;
+overflow:hidden;
+margin:0 3% 0 4%;
+}
+.advance_banner li p
+{
+width:100%;
+text-align:center;
+color:#000;
+margin-bottom:10px;
+}
+.advance_banner li p  a img
+{
+width:100%;
+height:auto;
+}
+.advance_banner li p a:link,.advance_banner li p a:visited
+{
+color:#1570a5;
+text-decoration:underline;
+}
+.large_banner
+{
+clear:both;
+position:relative;
+width:100%;
+height:auto;
+overflow:hidden;
+}
+.large_banner ul
+{
+clear:both;
+position:relative;
+width:100%;
+height:auto;
+overflow:hidden;
+margin-bottom:40px;
+}
+.large_banner ul li
+{
+position:relative;
+float:left;
+width:48%;
+height:auto;
+margin-right:4%;
+overflow:hidden;
+}
+.large_banner a:link,.large_banner a:visited
+{
+    color:#F60;
+}
+.large_banner ul li img
+{
+width:100%;
+height:auto;
+}
+.large_banner ul li .bold
+{
+height:43px;
+line-height:43px;
+font-size:17px;
+font-weight:normal;
+padding-top:2px;
+}
+.large_banner ul li p
+{
+line-height:1.5;
+}
+.kv_tips
+{
+clear:both;
+position:relative;
+width:100%;
+height:33px;
+border-bottom:1px solid #DDDDDD;
+border-top:1px solid #DDDDDD;
+margin-top:2px;
+}
+.kv_tips li
+{
+position:relative;
+float:left;
+display:block;
+padding:0 2% 0 2%;
+height:33px;
+line-height:33px;
+cursor:pointer;
+}
+.kv_tips .selected
+{
+background:#dedede;
+cursor:text;
+}
+.kv_tips li span
+{
+display:none;
+position:absolute;
+height:11px;
+overflow:hidden;
+top:-11px;
+left:0;
+background:url(../images/main/homepage_sprite_v3.gif) no-repeat center -254px;
+text-align:center;
+}
+.kv_tips .selected span
+{
+display:block;
+}
+
+
+@media all and (max-width:915px){
+
+.kv_tips
+{
+display:none;
+}
+.large_banner ul li
+{
+width:100%;
+margin-right:0;
+}
+.large_banner ul li div
+{
+width:35%;
+float:left;
+margin-right:5%;
+padding-top:13px;
+}
+.large_banner ul li p
+{
+width:60%;
+float:left;
+}
+.large_banner ul
+{
+margin-bottom:0;
+}
+}
+
+@media all and (max-width:580px){
+    .large_banner ul li p
+{
+clear:both;
+}
+}

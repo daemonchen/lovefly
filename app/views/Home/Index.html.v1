@@ -1,0 +1,209 @@
+{{set . "title" "Home"}}
+{{append . "moreScripts" "/public/js/banner.js"}}
+{{template "header.html" .}}
+<div id="ind_banner">
+    <ul class="img_list">
+        <li>
+            <a href="" target="_blank">
+                <img src="http://www.gjfxypx.com/uploads/131207/1-13120F2292I11.png" width="1000" height="458" alt="" />
+            </a>
+        </li>
+        <li>
+            <a href="" target="_blank">
+                <img src="http://www.gjfxypx.com/uploads/131218/1-13121R3305N64.png" width="1000" height="458" alt="" />
+            </a>
+        </li>
+        <li>
+            <a href="" target="_blank">
+                <img src="http://www.gjfxypx.com/uploads/131220/1-131220155H2406.png" width="1000" height="458" alt="" />
+            </a>
+        </li>
+        <li>
+            <a href="" target="_blank">
+                <img src="http://www.gjfxypx.com/uploads/131220/1-131220155H2406.png" width="1000" height="458" alt="" />
+            </a>
+        </li>
+    </ul>
+    <div id="btn_width">
+        <ul id="liwidth">
+            <li>
+                <a href="javascript:void(0);">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <div id="mainltA">
+        <h1>
+        <a href="/">金牌保证</a>
+        </h1>
+        <h2>Advantage</h2>
+    </div>
+    <div id="mainrtA">
+        <div id="about">
+            <a href="http://lovefly.com/post/index?stamp=1417848946475">
+                <h1>公司介绍</h1>
+                <h2>/ about</h2>
+            </a>
+        </div>
+        <div class="baoutview">
+            <p>上海航记飞行投资有限公司是北美及欧洲多家全球著名飞行机构在中国的唯一合作伙伴。目前投资了爱●飞行网www.lovefly.com 。公司秉承打造中国面向公众的第一航空飞行机构，为飞行爱好者，职业飞行员，与飞行相关的各企事业单位在中国低空飞行领域提供全方位一体化的标准与服务...<a href="http://lovefly.com/post/index?stamp=1417848946475">详细>></a>
+            </p>
+        </div>
+        <div class="spacer">
+        </div>
+    </div>
+    <div class="spacer">
+    </div>
+</div>
+<div class="kongHight">
+</div>
+<div class="content" id="com_thenm_banner" editok="online">
+    <a class="" href="/apply/index">
+        <img src="/public/img/step.png" style="border:0px;width:1000px;height:180px;">
+    </a>
+</div>
+<div class="kongHight">
+</div>
+<div class="content">
+    <div id="mainltB">
+        <h1>
+            <a href="/list/index?categoryId=2&subCategoryId=21">私人飞行</a>
+        </h1>
+        <h2>
+            <a href="/list/index?categoryId=2&subCategoryId=21" style="color:#fff;">执照</a>
+        </h2>
+    </div>
+    <div id="mainrtB">
+        <div id="plan">
+            <h1>
+                <a href="/list/index?categoryId=2&subCategoryId=22">仪器仪表</a>
+            </h1>
+            <h2 style="padding-top:0px;">
+                <a href="/list/index?categoryId=2&subCategoryId=22" style="color:#fff;">执照</a>
+            </h2>
+        </div>
+        <div id="design">
+            <h1>
+                <a href="/list/index?categoryId=2&subCategoryId=23">单引擎商业飞行</a>
+            </h1>
+            <h2 style="padding-top:0px;">
+                <a href="/list/index?categoryId=2&subCategoryId=23" style="color:#fff;">执照</a>
+            </h2>
+        </div>
+        <div id="service">
+            <h1>
+            <a href="/list/index?categoryId=2&subCategoryId=24">多引擎飞行</a>
+            </h1>
+            <h2><a href="/list/index?categoryId=2&subCategoryId=24" style="color:#fff;">执照</a></h2>
+        </div>
+        <div id="software">
+            <h1>
+                <a href="/list/index?categoryId=2&subCategoryId=26">飞行维护</a>
+            </h1>
+            <h2 style="padding-top:0px;">
+                <a href="/list/index?categoryId=2&subCategoryId=26" style="color:#fff;">培训</a>
+            </h2>
+        </div>
+        <div id="figure">
+            <h1>
+                <a href="/list/index?categoryId=2&subCategoryId=25">多引擎商业飞行</a>
+            </h1>
+            <h2 style="padding-top:0px;">
+                <a href="/list/index?categoryId=2&subCategoryId=25" style="color:#fff;">执照</a>
+            </h2>
+        </div>
+        <div class="spacer">
+        </div>
+    </div>
+    <div class="spacer">
+    </div>
+</div>
+<div class="kongHight">
+</div>
+<div class="content">
+    <div id="mainltC">
+        <div id="News_tit">
+            <a href="/list/index?categoryId=1">
+                <span>
+                <h1> 新闻中心 </h1>
+                <h2>news center</h2>
+                </span>
+            </a>
+        </div>
+        <ul id="News_cont">
+            <li class="no">
+                <div class="ltpic">
+                    <span>
+                    <a href="http://lovefly.com/post/index?stamp=1417858477381">
+                        <img src="http://lovefly.qiniudn.com/20140226105354057.jpg" alt="亚太未来飞机需求超万架 飞机上将可充电WIFI覆盖" />
+                    </a>
+                    </span>
+                    <a href="http://lovefly.com/post/index?stamp=1417858477381">
+                        <img src="/public/img/nopic.png" alt="亚太未来飞机需求超万架 飞机上将可充电WIFI覆盖" width="70" height="70" />
+                    </a>
+                </div>
+                <div class="rtcont">
+                    <h1>
+                    <a href="http://lovefly.com/post/index?stamp=1417858477381">亚太未来飞机需求超万架 飞机上将可充电WIFI覆盖</a>
+                    </h1>
+                    <p>近日，波音公司发出预计：亚太地区航空公司在未来20年将需要12820架新飞机，总价值1.9万亿美元，占到全世界新飞机交付量的36%。...<a href="http://lovefly.com/post/index?stamp=1417858477381">详细>></a>
+                    </p>
+                </div>
+                <br class="spacer" />
+            </li>
+            <li>
+                <div class="ltpic">
+                    <span>
+                    <a href="http://lovefly.com/post/index?stamp=1417858085996">
+                        <img src="http://lovefly.qiniudn.com/banner1.jpg" alt="航空招飞压力大 明年飞行员缺口将达1万" />
+                    </a>
+                    </span>
+                    <a href="http://lovefly.com/post/index?stamp=1417858085996">
+                        <img src="/public/img/nopic.png" alt="航空招飞压力大 明年飞行员缺口将达1万" width="70" height="70" />
+                    </a>
+                </div>
+                <div class="rtcont">
+                    <h1>
+                    <a href="http://lovefly.com/post/index?stamp=1417858085996">航空招飞压力大 明年飞行员缺口将达1万</a>
+                    </h1>
+                    <p>近日来，各种有关招飞的新闻不断。面对高薪的诱惑，许多年轻人都蠢蠢欲动，梦想成为其中的一员。然而要想成为飞行员，有哪些途径？...<a href="http://lovefly.com/post/index?stamp=1417858085996">详细>></a>
+                    </p>
+                </div>
+                <br class="spacer" />
+            </li>
+        </ul>
+    </div>
+    <div id="mainrtC">
+        <div id="team">
+            <h1>
+            <a href="/list/index?categoryId=3&subCategoryId=33">招生代理</a>
+            </h1>
+            <h2>enrollment</h2>
+        </div>
+        <div id="honor">
+            <h1>
+            <a href="/list/index?categoryId=4">俱乐部</a>
+            </h1>
+            <h2>club</h2>
+        </div>
+    </div>
+    <div class="spacer">
+    </div>
+</div>
+<div class="kongHight">
+</div>
+{{template "footer.html" .}}
