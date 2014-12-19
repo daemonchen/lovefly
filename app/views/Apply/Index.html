@@ -2,131 +2,142 @@
 {{set . "title" "爱飞网"}}
 {{append . "moreScripts" "/public/js/page/apply.js"}}
 {{template "common/header.html" .}}
-<!-- <div class="content" id="com_thenm_banner" editok="online">
-    <a class="pimg_banner">
-        <img src="http://www.whyyjzgs.com/upload/201408/1407922714.jpg" style="border:0px;width:1000px;height:267px">
-    </a>
-</div> -->
-<div class="content" id="com_thenm_banner" editok="online">
-    <a href="#">
-        <img src="http://www.gjfxypx.com/uploads/131207/1-13120F2292I11.png" width="1000" height="296" alt="">
-    </a>
-</div>
-<div class="sub-kong"></div>
+<!--content-->
 <div class="content">
-    <div id="applyForm" ng-controller="ApplyController">
-        <form>
-            <table style="width:97%;" cellpadding="0" cellspacing="1">
-                <tbody>
-                    <tr>
-                        <td align="right" valign="top" style="width:200px;">姓名：</td>
-                        <td>
-                            <input type="text" ng-model="name" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">联系电话：</td>
-                        <td>
-                            <input type="text" ng-model="phone" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">E_mail：</td>
-                        <td>
-                            <input type="text" ng-model="email" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">通讯地址：</td>
-                        <td>
-                            <input type="text" ng-model="address" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">课程：</td>
-                        <td>
-                            <select ng-model="courseType">
-                                <option value="21">私人飞行执照</option>
-                                <option value="22">仪器仪表执照</option>
-                                <option value="23">单引擎商业飞行执照</option>
-                                <option value="24">多引擎商业飞行执照</option>
-                                <option value="25">多引擎飞行执照</option>
-                                <option value="26">飞行维护培训</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">性别：</td>
-                        <td>
-                            <input type="radio" name="gender" ng-model="gender" checked="" value="1" /><span>男</span>
-                            <input type="radio" name="gender" ng-model="gender" value="2" /><span>女</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">籍贯：</td>
-                        <td>
-                            <input type="text" ng-model="bornAddress" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">出生年月日：</td>
-                        <td>
-                            <input type="text" ng-model="birthday" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">学历：</td>
-                        <td>
-                            <input type="text" ng-model="eduBackground" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">专业：</td>
-                        <td>
-                            <input type="text" ng-model="major" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">毕业时间：</td>
-                        <td>
-                            <input type="text" ng-model="graduationTime" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">英语等级：</td>
-                        <td>
-                            <input type="text" ng-model="englishLevel" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">身高：</td>
-                        <td>
-                            <input type="text" ng-model="tall" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">体重：</td>
-                        <td>
-                            <input type="text" ng-model="weight" class="intxt" value="" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">有无重大疾病史：</td>
-                        <td>
-                            <input type="radio" name="caseHistory" ng-model="caseHistory" class="np" value="1" checked="" />有
-                            <input type="radio" name="caseHistory" ng-model="caseHistory" class="np" value="2" />无
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="btn-wrapper">
-                <input type="button" value="提 交" class="coolbg" ng-click="doSubmit()" />
-                &nbsp;
-                <input type="button" value="重 置" class="coolbg" ng-click="doReset()" />
+    {{template "common/navigation.html" .}}
+    <!--right-->
+     <div class="right">
+          <div class="title1"><a href="#">飞行网</a><span>></span>我要报名</div>
+
+          <div class="company-about">
+
+            <div class="title2">
+                   请如实填写报名表
             </div>
-        </form>
-    </div>
+
+            <div class="coommon-p-word" ng-controller="ApplyController">
+                <form>
+                    <table style="width:97%;" cellpadding="0" cellspacing="1">
+                        <tbody>
+                            <tr>
+                                <td align="right" valign="top" style="width:200px;">姓名：</td>
+                                <td>
+                                    <input type="text" ng-model="name" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">联系电话：</td>
+                                <td>
+                                    <input type="text" ng-model="phone" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">E_mail：</td>
+                                <td>
+                                    <input type="text" ng-model="email" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">通讯地址：</td>
+                                <td>
+                                    <input type="text" ng-model="address" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">课程：</td>
+                                <td>
+                                    <select ng-model="courseType">
+                                        <option value="21">私人飞行执照</option>
+                                        <option value="22">仪器仪表执照</option>
+                                        <option value="23">单引擎商业飞行执照</option>
+                                        <option value="24">多引擎商业飞行执照</option>
+                                        <option value="25">多引擎飞行执照</option>
+                                        <option value="26">飞行维护培训</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">性别：</td>
+                                <td>
+                                    <input type="radio" name="gender" ng-model="gender" checked="" value="1" /><span>男</span>
+                                    <input type="radio" name="gender" ng-model="gender" value="2" /><span>女</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">籍贯：</td>
+                                <td>
+                                    <input type="text" ng-model="bornAddress" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">出生年月日：</td>
+                                <td>
+                                    <input type="text" ng-model="birthday" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">学历：</td>
+                                <td>
+                                    <input type="text" ng-model="eduBackground" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">专业：</td>
+                                <td>
+                                    <input type="text" ng-model="major" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">毕业时间：</td>
+                                <td>
+                                    <input type="text" ng-model="graduationTime" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">英语等级：</td>
+                                <td>
+                                    <input type="text" ng-model="englishLevel" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">身高：</td>
+                                <td>
+                                    <input type="text" ng-model="tall" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">体重：</td>
+                                <td>
+                                    <input type="text" ng-model="weight" class="intxt" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top">有无重大疾病史：</td>
+                                <td>
+                                    <input type="radio" name="caseHistory" ng-model="caseHistory" class="np" value="1" checked="" />有
+                                    <input type="radio" name="caseHistory" ng-model="caseHistory" class="np" value="2" />无
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="btn-wrapper">
+                        <input type="button" value="提 交" class="coolbg" ng-click="doSubmit()" />
+                        &nbsp;
+                        <input type="button" value="重 置" class="coolbg" ng-click="doReset()" />
+                    </div>
+                </form>
+
+            </div>
+
+
+
+          </div>
+
+
+
+     </div>
+     <!--right-->
+     <div class="clear"></div>
 </div>
-<div class="kongHight">
-</div>
+<!--content_end-->
 {{template "common/footer.html" .}}
