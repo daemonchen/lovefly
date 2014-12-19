@@ -142,7 +142,7 @@ height:11px;
 overflow:hidden;
 top:-11px;
 left:0;
-background:url(../images/main/homepage_sprite_v3.gif) no-repeat center -254px;
+background:url(/public/img/v2/homepage_sprite_v3.gif) no-repeat center -254px;
 text-align:center;
 }
 .kv_tips .selected span

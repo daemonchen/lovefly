@@ -88,7 +88,7 @@ height:90px;
 margin:0 auto;
 z-index:10;
 border-bottom:4px solid #eeeeee;
-background:url(../images/new/top-bg-new.jpg) repeat;
+background:url(/public/img/v2/top-bg-new.jpg) repeat;
 }
 .header_content
 {
@@ -131,7 +131,7 @@ font-size:13px;
 .header_content ul .menu_myaccount
 {
 padding-right:13px;
-background:url(../images/main/down_arrow.gif) no-repeat right center;
+background:url(/public/img/v2/down_arrow.gif) no-repeat right center;
 }
 .header_content ul li a:link,.header_content ul li a:visited
 {
@@ -201,14 +201,14 @@ position:absolute;
 display:block;
 width:16px;
 height:16px;
-background:url(../images/main/search.jpg) no-repeat 0 0;
+background:url(/public/img/v2/search.jpg) no-repeat 0 0;
 top:4px;
 right:5px;
 cursor:pointer;
 }
 .search a:hover
 {
-background:url(../images/main/search2.jpg) no-repeat 0 0;
+background:url(/public/img/v2/search2.jpg) no-repeat 0 0;
 }
 .custom_service
 {
@@ -239,7 +239,7 @@ position:relative;
 display:inline;
 float:right;
 padding:9px 20px 9px 9px;
-background:url(../images/main/down_arrow.gif) no-repeat 67px center #ffffff;
+background:url(/public/img/v2/down_arrow.gif) no-repeat 67px center #ffffff;
 border-left:2px solid #bababa;
 border-right:2px solid #bababa;
 border-top:2px solid #bababa;
@@ -420,7 +420,7 @@ display:none;
 position:absolute;
 width:6px;
 height:11px;
-background:url(../images/main/msstore_sprite_v15.png) no-repeat -2px -2px;
+background:url(/public/img/v2/msstore_sprite_v15.png) no-repeat -2px -2px;
 overflow:hidden;
 right:0px;
 top:17px;
@@ -432,7 +432,7 @@ display:none;
 position:absolute;
 width:6px;
 height:11px;
-background:url(../images/main/msstore_sprite_v15.png) no-repeat -2px -67px;
+background:url(/public/img/v2/msstore_sprite_v15.png) no-repeat -2px -67px;
 overflow:hidden;
 right:0px;
 top:7px;
@@ -444,7 +444,7 @@ display:none;
 position:absolute;
 width:6px;
 height:11px;
-background:url(../images/main/msstore_sprite_v15.png) no-repeat -2px -33px;
+background:url(/public/img/v2/msstore_sprite_v15.png) no-repeat -2px -33px;
 overflow:hidden;
 right:0px;
 top:7px;
@@ -456,7 +456,7 @@ display:none;
 position:absolute;
 width:6px;
 height:11px;
-background:url(../images/main/msstore_sprite_v15.png) no-repeat -2px -98px;
+background:url(/public/img/v2/msstore_sprite_v15.png) no-repeat -2px -98px;
 overflow:hidden;
 right:0px;
 top:7px;
@@ -582,11 +582,18 @@ position:relative;
 width:100%;
 font-size:20px;
 padding:35px 0 15px 0;
+overflow:hidden;
 }
 .coommon-p-word
 {
 line-height:1.8;
 color:#666;
+}
+.coommon-p-word img
+{
+    position:relative;
+    margin:0 auto;
+    display:block;
 }
 .coommon-p-word a:link,.coommon-p-word a:visited
 {
@@ -658,7 +665,7 @@ text-decoration:none!important;
 display:block;
 width:15px;
 height:16px;
-background:url(../images/main/updownnum.jpg) no-repeat 0 0;
+background:url(/public/img/v2/updownnum.jpg) no-repeat 0 0;
 cursor:pointer;
 }
 .down_num_click
@@ -666,7 +673,7 @@ cursor:pointer;
 display:block;
 width:15px;
 height:16px;
-background:url(../images/main/updownnum.jpg) no-repeat 0 bottom;
+background:url(/public/img/v2/updownnum.jpg) no-repeat 0 bottom;
 cursor:pointer;
 }
 .clear_both
@@ -849,7 +856,7 @@ color:#ff6600;
 {
 width:22px;
 height:22px;
-background:url(../images/main/sprite_smallArrow.gif) no-repeat 0 -305px;
+background:url(/public/img/v2/sprite_smallArrow.gif) no-repeat 0 -305px;
 border:0;
 margin-top:0;
 margin-left:10px;
@@ -858,7 +865,7 @@ margin-left:10px;
 {
 width:22px;
 height:22px;
-background:url(../images/main/sprite_smallArrow.gif) no-repeat 0 -273px;
+background:url(/public/img/v2/sprite_smallArrow.gif) no-repeat 0 -273px;
 border:0;
 margin-top:0;
 margin-right:0px;
@@ -869,20 +876,20 @@ margin-left:5px;
 {
 width:22px;
 height:22px;
-background:url(../images/main/sprite_smallArrow.gif) no-repeat 0 -369px;
+background:url(/public/img/v2/sprite_smallArrow.gif) no-repeat 0 -369px;
 border:0;
 margin-top:0;
 margin-left:10px;
 }
 .proca_fenye .up_page:hover
 {
-background:url(../images/main/sprite_smallArrow.gif) no-repeat 0 -337px;
+background:url(/public/img/v2/sprite_smallArrow.gif) no-repeat 0 -337px;
 }
 .proca_fenye .down_page:link,.proca_fenye .down_page:visited
 {
 width:22px;
 height:22px;
-background:url(../images/main/sprite_smallArrow.gif) no-repeat 0 -209px;
+background:url(/public/img/v2/sprite_smallArrow.gif) no-repeat 0 -209px;
 border:0;
 margin-top:0;
 margin-right:0px;
@@ -890,7 +897,7 @@ margin-left:5px;
 }
 .proca_fenye .down_page:hover
 {
-background:url(../images/main/sprite_smallArrow.gif) no-repeat 0 -241px;
+background:url(/public/img/v2/sprite_smallArrow.gif) no-repeat 0 -241px;
 }
 .proca_fenye .page_selected:link,.proca_fenye .page_selected:visited
 {
@@ -1138,7 +1145,7 @@ background:#000;
 }
 .alipay
 {
-background:url(../images/main/zfb_bg.jpg) no-repeat 170px -50px;
+background:url(/public/img/v2/zfb_bg.jpg) no-repeat 170px -50px;
 }
 .alipay a:link,.alipay a:visited
 {
@@ -1224,7 +1231,7 @@ overflow:hidden;
 padding:10px 0 15px 0;
 border:1px solid #a5ce3b;
 margin:10px auto;
-background:url(../images/main/gou.png) no-repeat 15px 10px #EEF8CF;
+background:url(/public/img/v2/gou.png) no-repeat 15px 10px #EEF8CF;
 }
 .green_banner_warning p
 {
@@ -1248,7 +1255,7 @@ overflow:hidden;
 padding:10px 0 15px 0;
 border:1px solid #F00;
 margin:10px auto;
-background:url(../images/main/cha.png) no-repeat 15px 10px #FEDEDE;
+background:url(/public/img/v2/cha.png) no-repeat 15px 10px #FEDEDE;
 }
 .red_banner_warning p
 {
@@ -1272,7 +1279,7 @@ overflow:hidden;
 padding:10px 0 15px 0;
 border:1px solid #FC0;
 margin:10px auto;
-background:url(../images/main/yellow_gt.jpg) no-repeat 15px 10px #ffffff;
+background:url(/public/img/v2/yellow_gt.jpg) no-repeat 15px 10px #ffffff;
 }
 .yellow_banner_warning p
 {
@@ -1366,7 +1373,7 @@ width:890px;
 height:auto;
 padding-bottom:20px;
 padding-left:50px;
-background:url(../images/main/cha.png) no-repeat 0 0;
+background:url(/public/img/v2/cha.png) no-repeat 0 0;
 }
 .error_content label
 {
@@ -1446,12 +1453,7 @@ border-bottom:1px solid #ccc;
 height:30px;
 }
 /*help_end*/
-/*corp sales*/
-.corp_sales_banner {
-width:732px;
-height:486px;
-background: #fff url('../images/main/corp-sales.jpg') no-repeat;
-}
+
 
 /*faq*/
 .hch_title
@@ -1547,3 +1549,70 @@ padding-bottom:25px;
     height:40px;
     margin-bottom:10px;
 }
+.news-center
+{
+    clear:both;
+    width:100%;
+    overflow:hidden;
+    padding-top:10px;
+}
+.news-center li
+{
+    clear:both;
+    float:left;
+    width:100%;
+    padding:10px 0;
+    overflow:hidden;
+    border-bottom:1px dotted #dedede;
+}
+.news-center li a:link,.news-center li a:visited
+{
+    display:inline-block;
+    width:80%;
+    white-space:nowrap;
+    overflow:hidden;
+    color:#069;
+}
+.news-center li a:hover
+{
+    color:#ff6600;
+}
+.news-center li span
+{
+    float:right;
+    color:#666;
+}
+
+.num-page
+{
+    clear:both;
+    width:100%;
+    text-align:center;
+    padding:20px 0 10px 0;
+    overflow:hidden;
+}
+.num-page a:link,.num-page a:visited
+{
+    display:inline-block;
+    border:1px solid #dedede;
+    padding:3px 7px;
+    background:#fff;
+    margin:0 1px;
+    color:#333;
+}
+.num-page .selected
+{
+    color:#fff!important;
+    background:#069!important;
+    border:1px solid #fff;
+}
+.num-page a:hover
+{
+    color:#fff!important;
+    background:#ff6600!important;
+    border:1px solid #fff;
+}
+.footer-bottom{position:absolute; left:0; bottom:0;}
+.news-select:link,.news-select:visited{color:#ccc; float:left; margin-right:10px; font-size:14px; margin-top:6px;}
+.news-select:hover{color:#333;}
+.news-select.selected:link,.news-select.selected:visited{color:#333; font-size:20px; margin-top:0;}
