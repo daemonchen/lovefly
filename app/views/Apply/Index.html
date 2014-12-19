@@ -1,143 +1,163 @@
 {{set . "controllerName" .controllerName}}
 {{set . "title" "爱飞网"}}
+{{append . "moreStyles" "/css/v2/form/bootstrap-horizontal-form.css"}}
 {{append . "moreScripts" "/public/js/page/apply.js"}}
 {{template "common/header.html" .}}
 <!--content-->
 <div class="content">
     {{template "common/navigation.html" .}}
     <!--right-->
-     <div class="right">
-          <div class="title1"><a href="#">飞行网</a><span>></span>我要报名</div>
-
-          <div class="company-about">
-
+    <div class="right">
+        <div class="title1"><a href="#">飞行网</a><span>></span>我要报名</div>
+        <div class="company-about">
             <div class="title2">
-                   请如实填写报名表
+                请如实填写报名表
             </div>
+            <div class="coommon-p-word" ng-controller="ApplyController" style="padding-top:20px;">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">姓名：</label>
+                            <div class="controls">
+                                <input ng-model="name" type="text" placeholder="姓名" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">联系电话：</label>
+                            <div class="controls">
+                                <input ng-model="phone" type="text" placeholder="联系电话" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">E_mail：</label>
+                            <div class="controls">
+                                <input ng-model="email" type="text" placeholder="E_mail" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">通讯地址：</label>
+                            <div class="controls">
+                                <input ng-model="address" type="text" placeholder="通讯地址" class="input-xlarge">
+                            </div>
+                        </div>
 
-            <div class="coommon-p-word" ng-controller="ApplyController">
-                <form>
-                    <table style="width:97%;" cellpadding="0" cellspacing="1">
-                        <tbody>
-                            <tr>
-                                <td align="right" valign="top" style="width:200px;">姓名：</td>
-                                <td>
-                                    <input type="text" ng-model="name" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">联系电话：</td>
-                                <td>
-                                    <input type="text" ng-model="phone" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">E_mail：</td>
-                                <td>
-                                    <input type="text" ng-model="email" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">通讯地址：</td>
-                                <td>
-                                    <input type="text" ng-model="address" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">课程：</td>
-                                <td>
-                                    <select ng-model="courseType">
-                                        <option value="21">私人飞行执照</option>
-                                        <option value="22">仪器仪表执照</option>
-                                        <option value="23">单引擎商业飞行执照</option>
-                                        <option value="24">多引擎商业飞行执照</option>
-                                        <option value="25">多引擎飞行执照</option>
-                                        <option value="26">飞行维护培训</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">性别：</td>
-                                <td>
-                                    <input type="radio" name="gender" ng-model="gender" checked="" value="1" /><span>男</span>
-                                    <input type="radio" name="gender" ng-model="gender" value="2" /><span>女</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">籍贯：</td>
-                                <td>
-                                    <input type="text" ng-model="bornAddress" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">出生年月日：</td>
-                                <td>
-                                    <input type="text" ng-model="birthday" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">学历：</td>
-                                <td>
-                                    <input type="text" ng-model="eduBackground" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">专业：</td>
-                                <td>
-                                    <input type="text" ng-model="major" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">毕业时间：</td>
-                                <td>
-                                    <input type="text" ng-model="graduationTime" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">英语等级：</td>
-                                <td>
-                                    <input type="text" ng-model="englishLevel" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">身高：</td>
-                                <td>
-                                    <input type="text" ng-model="tall" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">体重：</td>
-                                <td>
-                                    <input type="text" ng-model="weight" class="intxt" value="" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" valign="top">有无重大疾病史：</td>
-                                <td>
-                                    <input type="radio" name="caseHistory" ng-model="caseHistory" class="np" value="1" checked="" />有
-                                    <input type="radio" name="caseHistory" ng-model="caseHistory" class="np" value="2" />无
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="btn-wrapper">
-                        <input type="button" value="提 交" class="coolbg" ng-click="doSubmit()" />
-                        &nbsp;
-                        <input type="button" value="重 置" class="coolbg" ng-click="doReset()" />
-                    </div>
+                        <div class="control-group">
+                            <!-- Select Basic -->
+                            <label class="control-label">课程：</label>
+                            <div class="controls">
+                                <select class="input-xlarge" ng-model="courseType">
+                                    <option value="21">私人飞行执照</option>
+                                    <option value="22">仪器仪表执照</option>
+                                    <option value="23">单引擎商业飞行执照</option>
+                                    <option value="24">多引擎商业飞行执照</option>
+                                    <option value="25">多引擎飞行执照</option>
+                                    <option value="26">飞行维护培训</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">性别：</label>
+                            <div class="controls">
+                                <!-- Inline Radios -->
+                                <label class="radio inline">
+                                    <input type="radio" value="1"  name="gender" ng-model="gender">
+                                    男
+                                </label>
+                                <label class="radio inline">
+                                    <input type="radio" value="2" name="gender" ng-model="gender">
+                                    女
+                                </label>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">籍贯：</label>
+                            <div class="controls">
+                                <input ng-model="bornAddress" type="text" placeholder="籍贯" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">出生年月日：</label>
+                            <div class="controls">
+                                <input ng-model="birthday" type="text" placeholder="出生年月日" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">学历：</label>
+                            <div class="controls">
+                                <input ng-model="eduBackground" type="text" placeholder="学历" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">专业：</label>
+                            <div class="controls">
+                                <input ng-model="major" type="text" placeholder="专业" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">毕业时间</label>
+                            <div class="controls">
+                                <input ng-model="graduationTime" type="text" placeholder="毕业时间" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">英语等级：</label>
+                            <div class="controls">
+                                <input ng-model="englishLevel" type="text" placeholder="英语等级" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">身高：</label>
+                            <div class="controls">
+                                <input ng-model="tall" type="text" placeholder="身高" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">体重：</label>
+                            <div class="controls">
+                                <input ng-model="weight" type="text" placeholder="体重" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">有无重大疾病史：</label>
+                            <div class="controls">
+                                <!-- Inline Radios -->
+                                <label class="radio inline">
+                                    <input type="radio" value="1"  name="caseHistory" ng-model="caseHistory">
+                                    有
+                                </label>
+                                <label class="radio inline">
+                                    <input type="radio" value="2" name="caseHistory" ng-model="caseHistory">
+                                    无
+                                </label>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Button -->
+                            <div class="controls">
+                                <button class="btn btn-success" ng-click="doSubmit()">提 交</button>
+                                <button class="btn btn-warning" ng-click="doReset()">重 置</button>
+                            </div>
+                        </div>
+                    </fieldset>
                 </form>
 
             </div>
-
-
-
-          </div>
-
-
-
-     </div>
-     <!--right-->
-     <div class="clear"></div>
+        </div>
+    </div>
+    <!--right-->
+    <div class="clear"></div>
 </div>
 <!--content_end-->
 {{template "common/footer.html" .}}
