@@ -3,72 +3,36 @@
 {{append . "moreScripts" "/public/js/page/list.js"}}
 {{append . "moreScripts" "/public/js/page/category.js"}}
 {{template "common/header.html" .}}
-
 <!--content-->
 <div class="content">
-
     {{template "common/navigation.html" .}}
-
-     <!--right-->
-     <div class="right">
-          <div class="title1"><a href="#">飞行网</a><span>></span>政策新闻</div>
-
-          <div class="company-about">
-
-              <div class="title2">
-                   <a href="#" class="news-select selected">政策新闻</a>
-                   <a href="#" class="news-select">行业动态</a>
-                   <a href="#" class="news-select">飞机介绍</a>
-                   <a href="#" class="news-select">航空英语</a>
-                   <a href="#" class="news-select">常见问题</a>
-              </div>
-
-              <ul class="news-center">
-                  <li>
-                  <a href="#">SOS！紧急救援的问题与出路——中国通用航空救援志愿者行动起航</a><span class="new-hour">8 hours ago</span>
-                  </li>
-
-                  <li>
-                  <a href="#">2014年度最佳无人机航拍照</a><span class="new-hour">8 hours ago</span>
-                  </li>
-
-                  <li>
-                  <a href="#">飞行员：一年赚40万并不难</a><span class="new-hour">8 hours ago</span>
-                  </li>
-
-                  <li>
-                  <a href="#">北京建亚洲最大医疗楼 楼顶设直升机坪</a><span class="new-hour">8 hours ago</span>
-                  </li>
-
-                  <li>
-                  <a href="#">亚太未来飞机需求超万架 飞机上将可充电WIFI覆盖</a><span class="new-hour">8 hours ago</span>
-                  </li>
-
-                  <li>
-                  <a href="#">航空招飞压力大 明年飞行员缺口将达1万</a><span class="new-hour">8 hours ago</span>
-                  </li>
-              </ul>
-
-
-              <div class="num-page">
-                   <a href="javascript:void(0);">&lt; 上一页</a>
-                   <a href="javascript:void(0);" class="selected">1</a>
-                   <a href="javascript:void(0);">2</a>
-                   <a href="javascript:void(0);">3</a>
-                   <a href="javascript:void(0);">下一页 &gt;</a>
-              </div>
-
-          </div>
-
-
-
-     </div>
-     <!--right-->
-     <div class="clear"></div>
+    <!--right-->
+    <div class="right">
+        <div class="title1"><a href="#">飞行网</a><span>></span>政策新闻</div>
+        <div class="company-about">
+            <div class="title2" ng-controller="CategoryController">
+                <a href="/list/index?categoryId=[[categoryId]]&subCategoryId=[[subCategory.id]]" class="news-select selected" ng-repeat="subCategory in subCategories">
+                    [[subCategory.name]]
+                </a>
+            </div>
+            <ul class="news-center" ng-controller='ListController'>
+                <li ng-repeat='post in posts'>
+                    <a href="/post/index?stamp=[[post.Stamp]]">[[post.Title]]</a>
+                    <span class="new-hour">[[post.Date]]</span>
+                </li>
+            </ul>
+            <div class="num-page">
+                <a href="javascript:void(0);">&lt; 上一页</a>
+                <a href="javascript:void(0);" class="selected">1</a>
+                <a href="javascript:void(0);">2</a>
+                <a href="javascript:void(0);">3</a>
+                <a href="javascript:void(0);">下一页 &gt;</a>
+            </div>
+        </div>
+    </div>
+    <!--right-->
+    <div class="clear"></div>
 </div>
 <!--content_end-->
-
 <div class="clear" style="height:30px;"></div>
-
-
 {{template "common/footer.html" .}}
