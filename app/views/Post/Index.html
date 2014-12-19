@@ -1,55 +1,42 @@
-{{set . "title" "Post"}}
+{{set . "title" "爱飞网"}}
 {{set . "controllerName" .controllerName}}
 {{append . "moreScripts" "/public/js/lib/md5.js"}}
 {{append . "moreScripts" "/public/js/page/post.js"}}
-{{template "header.html" .}}
-<div class="content" id="com_thenm_banner" editok="online">
-    <a href="#">
-        <img src="http://www.gjfxypx.com/uploads/131207/1-13120F2292I11.png" width="1000" height="296" alt="">
-    </a>
-</div>
-<div class="sub-kong"></div>
+{{template "common/header.html" .}}
+<!--content-->
 <div class="content">
-    <!-- <div id="menu">
-        <div class="sidebar" id="com_sort_products" editok="online">
-            <div id="smoothmenu2" class="leftlist">
-                <div class="sidebar_l">
-                    <ul class="sortnavul">
-                        <li class="sortnavli">
-                            <a href="/plus/list.php?tid=14" class="sortnava">公司新闻</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <div class="sub-mid" ng-controller='PostController'>
-        {{template "common/spinner.html" .}}
-        <div id="com_thenm_list" editok="online" class="content">
-            <h1 class="p_n_title">[[post.Title]]</h1>
-            <div class="p_n_info">
-                *  发表时间 : [[time]]
-            </div>
-            <div class="remark">
-                {{if eq .isLogin "true"}}
-                <i class="edit icon" id="editor">
-                </i>
-                <a href="/edit/index?stamp=[[post.Stamp]]">edit</a>
-                <button ng-click="deletePost()">delete</button>
-                <!-- <i class="delete icon" id="delete">delete</i> -->
-                {{end}}
-                <!-- content -->
-                <div ng-bind-html="post.Content"></div>
+    {{template "common/navigation.html" .}}
+    <!--right-->
+     <div class="right">
+          <div class="title1"><a href="#">飞行网</a><span>></span>政策新闻</div>
 
-                <br>
+          <div class="company-about" ng-controller='PostController'>
+
+            <div class="title2">
+                   [[post.Title]]
             </div>
-            <!-- <div class="prevnext">
-                <span class="prevrecord">上一篇：没有了 </span>
-                <span class="nextrecord">下一篇：没有了 </span>
-            </div> -->
-        </div>
-    </div>
+            <p>*  发表时间 : [[time]]</p>
+            {{if eq .isLogin "true"}}
+            <i class="edit icon" id="editor">
+            </i>
+            <a href="/edit/index?stamp=[[post.Stamp]]">edit</a>
+            <button ng-click="deletePost()">delete</button>
+            <!-- <i class="delete icon" id="delete">delete</i> -->
+            {{end}}
+            <div class="coommon-p-word" ng-bind-html="post.Content">
+
+            </div>
+
+
+
+          </div>
+
+
+
+     </div>
+     <!--right-->
+     <div class="clear"></div>
 </div>
-<div class="kongHight">
-</div>
-{{template "footer.html" .}}
+<!--content_end-->
+<div class="clear" style="height:30px;"></div>
+{{template "common/footer.html" .}}
