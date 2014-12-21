@@ -8,7 +8,7 @@
     {{template "common/navigation.html" .}}
     <!--right-->
      <div class="right">
-          <div class="title1"><a href="#">飞行网</a><span>></span>政策新闻</div>
+          <div class="title1"><a href="/">飞行网</a><span>></span>政策新闻</div>
 
           <div class="company-about" ng-controller='PostController'>
 
@@ -19,7 +19,7 @@
             {{if eq .isLogin "true"}}
             <i class="edit icon" id="editor">
             </i>
-            <a href="/edit/index?stamp=[[post.Stamp]]">edit</a>
+            <a ng-href="/edit/index?stamp=[[post.Stamp]]">edit</a>
             <button ng-click="deletePost()">delete</button>
             <!-- <i class="delete icon" id="delete">delete</i> -->
             {{end}}

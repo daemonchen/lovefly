@@ -9,18 +9,18 @@
     <!--right-->
     <div class="right">
         <div class="title1" ng-controller="CategoryController">
-            <a href="#">飞行网</a>
+            <a href="/">飞行网</a>
             <span>></span>[[currentCategory.name]]
         </div>
         <div class="company-about">
             <div class="title2" ng-controller="CategoryController">
-                <a href="/list/index?categoryId=[[categoryId]]&subCategoryId=[[subCategory.id]]" class="news-select [[subCategory.selected]]" ng-repeat="subCategory in subCategories">
+                <a ng-href="/list/index?categoryId=[[categoryId]]&subCategoryId=[[subCategory.id]]" class="news-select [[subCategory.selected]]" ng-repeat="subCategory in subCategories">
                     [[subCategory.name]]
                 </a>
             </div>
             <ul class="news-center" ng-controller='ListController'>
                 <li ng-repeat='post in posts'>
-                    <a href="/post/index?stamp=[[post.Stamp]]">[[post.Title]]</a>
+                    <a ng-href="/post/index?stamp=[[post.Stamp]]">[[post.Title]]</a>
                     <span class="new-hour">[[post.Date]]</span>
                 </li>
             </ul>
