@@ -2,13 +2,17 @@
 {{set . "controllerName" .controllerName}}
 {{append . "moreScripts" "/public/js/lib/md5.js"}}
 {{append . "moreScripts" "/public/js/page/post.js"}}
+{{append . "moreScripts" "/public/js/page/category.js"}}
 {{template "common/header.html" .}}
 <!--content-->
 <div class="content">
     {{template "common/navigation.html" .}}
     <!--right-->
      <div class="right">
-          <div class="title1"><a href="/">飞行网</a><span>></span>政策新闻</div>
+          <div class="title1" ng-controller="CategoryController">
+            <a href="/">飞行网</a><span>></span>
+            [[currentCategory.name]]
+          </div>
 
           <div class="company-about" ng-controller='PostController'>
 

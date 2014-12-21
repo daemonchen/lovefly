@@ -20,7 +20,7 @@
             </div>
             <ul class="news-center" ng-controller='ListController'>
                 <li ng-repeat='post in posts'>
-                    <a ng-href="/post/index?stamp=[[post.Stamp]]">[[post.Title]]</a>
+                    <a ng-href="/post/index?categoryId=[[categoryId]]&subCategoryId=[[subCategoryId]]&stamp=[[post.Stamp]]">[[post.Title]]</a>
                     <span class="new-hour">[[post.Date]]</span>
                 </li>
             </ul>
