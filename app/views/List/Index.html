@@ -1,4 +1,4 @@
-{{set . "controllerName" .controllerName}}
+<!-- {{set . "controllerName" .controllerName}} -->
 {{set . "title" "爱飞网"}}
 {{append . "moreScripts" "/public/js/page/list.js"}}
 {{append . "moreScripts" "/public/js/page/category.js"}}
@@ -8,10 +8,13 @@
     {{template "common/navigation.html" .}}
     <!--right-->
     <div class="right">
-        <div class="title1"><a href="#">飞行网</a><span>></span>政策新闻</div>
+        <div class="title1" ng-controller="CategoryController">
+            <a href="#">飞行网</a>
+            <span>></span>[[currentCategory.name]]
+        </div>
         <div class="company-about">
             <div class="title2" ng-controller="CategoryController">
-                <a href="/list/index?categoryId=[[categoryId]]&subCategoryId=[[subCategory.id]]" class="news-select" ng-repeat="subCategory in subCategories">
+                <a href="/list/index?categoryId=[[categoryId]]&subCategoryId=[[subCategory.id]]" class="news-select [[subCategory.selected]]" ng-repeat="subCategory in subCategories">
                     [[subCategory.name]]
                 </a>
             </div>

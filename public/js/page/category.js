@@ -1,4 +1,5 @@
 lovefly.controller('CategoryController', function($scope, $http, $log, _){
+    /*文章类目数据结构*/
     $scope.categories = [{
         id: 1,
         name: '资讯',
@@ -86,13 +87,14 @@ lovefly.controller('CategoryController', function($scope, $http, $log, _){
         }]
     }, {
         id: 5,
-        name: '关于',
+        name: '关于我们',
         children: [{
             id: 51,
             name: '公司介绍',
             parentId: 5
         }]
     }];
+    /*根据url中的参数渲染文章类目*/
   if (location.href.indexOf("categoryId") > 0) {
     var urlParams = location.href.split("?")[1].split("&");
     var urlParamsMap = {};
@@ -100,22 +102,23 @@ lovefly.controller('CategoryController', function($scope, $http, $log, _){
         urlParamsMap[urlParams[i].split("=")[0]] = urlParams[i].split("=")[1];
     };
     $scope.categoryId = urlParamsMap["categoryId"];
+    $scope.subCategoryId = urlParamsMap["subCategoryId"];
+
+    //当前页面所在的大类目
     $scope.currentCategory = _.find($scope.categories, function(item){
         return item.id == $scope.categoryId;
     })
+    //当前页面所在的大类目下的所有子类目
     $scope.subCategories = $scope.currentCategory.children;
-    $log.log("subCategories", $scope.subCategories);
+
+    _.each($scope.subCategories, function(item){
+        if (item.id == $scope.subCategoryId) {
+            item.selected = "selected"//增加子类目选中状态
+        };
+    });
+    // $log.log("subCategories", $scope.subCategories);
   };
 
-  var logError = function(data, status) {
-    $log.log('code '+status+': '+data);
-  };
-  // $scope.loading = true;
 
-  var init = function() {
-
-  };
-
-  init();
 
 })
