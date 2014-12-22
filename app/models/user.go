@@ -11,8 +11,8 @@ type User struct {
     Id       bson.ObjectId `bson:"_id,omitempty"`
     Username string        `bson:"username"`
     Password string        `bson:"password"`
-    UserType int           `bson:"userType"`
-    // Stamp string        `bson:"stamp"`
+    UserType int           `bson:"userType"` //1:admin,2:customer
+    Stamp    int64         `bson:"stamp"`
 }
 
 func getUsersCollection(s *mgo.Session) *mgo.Collection {

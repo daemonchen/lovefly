@@ -5,7 +5,7 @@ lovefly.controller('RegisterController', function($scope, $http, $log, _, $cooki
     $scope.refer = document.referrer;
     $scope.register = function() {
         $log.log($scope.username);
-        return $http.post('/admin/register', {
+        return $http.post('/register/register', {
             username: $scope.username,
             password: $scope.password
         }).
@@ -13,7 +13,7 @@ lovefly.controller('RegisterController', function($scope, $http, $log, _, $cooki
             $cookieStore.put("username", $scope.username);
             alert("register success");
             // window.location.href = $scope.refer;
-            window.location.href = '/edit/index';
+            window.location.href = '/';
         }).
         error($scope.logError);
     }

@@ -20,17 +20,9 @@ type List struct {
 //TODO: rework this code later
 // func (c List) Index(categoryId int) revel.Result {
 func (c List) Index() revel.Result {
-    // controllerNameMap := map[int]string{
-    //     1:  "news",
-    //     2:  "project",
-    //     3:  "student",
-    //     4:  "club",
-    //     5:  "about"}
-    // controllerName := "news"
-    // if categoryId > 0 {
-    //     controllerName = controllerNameMap[categoryId]
-    // }
-    return c.Render()
+    controllerName := "list"
+    username := c.Session["userName"]
+    return c.Render(controllerName, username)
 }
 
 func (c List) GetPostsList(categoryId int, subCategoryId int) revel.Result {

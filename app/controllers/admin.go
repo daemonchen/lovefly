@@ -9,6 +9,7 @@ import (
     "github.com/revel/revel"
     "github.com/revmgo"
     "gopkg.in/mgo.v2/bson"
+    "time"
 )
 
 type Admin struct {
@@ -66,6 +67,7 @@ func (c Admin) Login(username string, password string) revel.Result {
 func (c Admin) Register(user *models.User) revel.Result {
     user.Id = bson.NewObjectId()
     user.UserType = 1
+    user.Stamp = time.Now().UnixNano() / 1e6
     decoder := json.NewDecoder(c.Request.Body)
     decoder.Decode(&user)
     pwd := fmt.Sprintf("%x", md5.Sum([]byte(user.Password)))

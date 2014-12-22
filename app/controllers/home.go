@@ -8,5 +8,6 @@ type Home struct {
 
 func (c Home) Index() revel.Result {
     controllerName := "home"
-    return c.Render(controllerName)
+    username := c.Session["userName"]
+    return c.Render(controllerName, username)
 }
