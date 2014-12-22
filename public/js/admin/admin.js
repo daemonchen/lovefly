@@ -22,7 +22,7 @@ lovefly.controller('LoginController', function($scope, $http, $log, _, $cookieSt
             }
         }).
         success(function() {
-            console.log("login success");
+            console.log("login admin success");
             $cookieStore.put("username", $scope.username);
             //TODO display userinfo on page
             // window.location.href = $scope.refer;
@@ -44,7 +44,7 @@ lovefly.controller('RegisterController', function($scope, $http, $log, _, $cooki
         }).
         success(function() {
             $cookieStore.put("username", $scope.username);
-            alert("register success");
+            alert("register admin success");
             // window.location.href = $scope.refer;
             window.location.href = '/edit/index';
         }).

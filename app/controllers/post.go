@@ -33,12 +33,13 @@ func (c *Post) Index() revel.Result {
     controllerName := "home"
     isLogin := c.Session["islogin"]
     username := c.Session["userName"]
+    userType := c.Session["userType"]
     randNum := rand.Int63n(time.Now().Unix())
     hashKey := c.generateSessionKey()
     c.Session[string(hashKey[:])] = strconv.FormatInt(randNum, 10)
     CommentCache[strconv.FormatInt(randNum, 10)] = "true"
     fmt.Println("post---")
-    return c.Render(controllerName, isLogin, username)
+    return c.Render(controllerName, isLogin, username, userType)
 
 }
 func (c *Post) GetPostByStamp(stamp string) revel.Result {

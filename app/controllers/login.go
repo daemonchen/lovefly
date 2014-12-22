@@ -8,6 +8,7 @@ import (
     "fmt"
     "github.com/revel/revel"
     "github.com/revmgo"
+    "strconv"
     // "gopkg.in/mgo.v2/bson"
 )
 
@@ -26,6 +27,7 @@ func (c Login) Index() revel.Result {
 func (c Login) Logout() revel.Result {
     c.Session["islogin"] = "false"
     c.Session["userName"] = ""
+    c.Session["userType"] = "0"
     return c.Redirect(Home.Index)
 }
 
@@ -38,12 +40,15 @@ func (c Login) Login(username string, password string) revel.Result {
         c.Session["islogin"] = "true"
         fmt.Println("username---", user.Username)
         c.Session["userName"] = user.Username
+        c.Session["userType"] = strconv.Itoa(user.UserType)
         return c.RenderJson(responseJson)
     } else {
         responseJson = &Result{"caicaikana", "login failed"}
         c.Response.Status = 403
         c.Session["islogin"] = "false"
         c.Session["userName"] = ""
+        c.Session["userType"] = "0"
+
         return c.RenderJson(responseJson)
 
     }

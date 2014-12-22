@@ -9,6 +9,7 @@ import (
     "github.com/revel/revel"
     "github.com/revmgo"
     "gopkg.in/mgo.v2/bson"
+    "strconv"
     "time"
 )
 
@@ -40,6 +41,7 @@ func (c Register) Register(user *models.User) revel.Result {
     } else {
         c.Session["islogin"] = "true"
         c.Session["userName"] = user.Username
+        c.Session["userType"] = strconv.Itoa(user.UserType)
         revel.INFO.Println("register success")
         return c.RenderJson(&Result{"success", "register"})
     }
