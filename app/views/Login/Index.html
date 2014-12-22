@@ -1,0 +1,50 @@
+{{set . "controllerName" .controllerName}}
+{{set . "title" "爱飞网"}}
+{{append . "moreStyles" "/css/v2/form/bootstrap-horizontal-form.css"}}
+{{append . "moreScripts" "/public/js/lib/md5.js"}}
+{{append . "moreScripts" "/public/js/page/login.js"}}
+{{template "common/header.html" .}}
+<!--content-->
+<div class="content">
+    {{template "common/navigation.html" .}}
+    <!--right-->
+    <div class="right">
+        <div class="title1"><a href="#">飞行网</a><span>></span>登录</div>
+        <div class="company-about">
+            <div class="title2">
+                欢迎回来爱飞网
+            </div>
+            <div class="coommon-p-word" ng-controller="LoginController" style="padding-top:20px;">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">用户名：</label>
+                            <div class="controls">
+                                <input ng-model="username" type="text" placeholder="用户名" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">密码：</label>
+                            <div class="controls">
+                                <input ng-model="password" type="text" placeholder="密码" class="input-xlarge">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <!-- Button -->
+                            <div class="controls">
+                                <button class="btn btn-success" ng-click="login()">登 录</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!--right-->
+    <div class="clear"></div>
+</div>
+<!--content_end-->
+{{template "common/footer.html" .}}
