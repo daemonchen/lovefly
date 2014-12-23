@@ -20,7 +20,7 @@
                    [[post.Title]]
             </div>
             <p>*  发表时间 : [[time]]</p>
-            {{if eq .userType 1}}
+            {{if eq .userType "1"}}
             <i class="edit icon" id="editor">
             </i>
             <a ng-href="/edit/index?stamp=[[post.Stamp]]">edit</a>

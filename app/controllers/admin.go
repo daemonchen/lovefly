@@ -9,6 +9,7 @@ import (
     "github.com/revel/revel"
     "github.com/revmgo"
     "gopkg.in/mgo.v2/bson"
+    "strconv"
     "time"
 )
 
@@ -32,6 +33,7 @@ func (c Admin) Index() revel.Result {
 func (c Admin) Logout() revel.Result {
     c.Session["islogin"] = "false"
     c.Session["userName"] = ""
+    c.Session["userType"] = "0"
     return c.Redirect(Admin.Index)
 }
 func (c Admin) Application() revel.Result {
@@ -53,12 +55,14 @@ func (c Admin) Login(username string, password string) revel.Result {
         c.Session["islogin"] = "true"
         fmt.Println("username---", user.Username)
         c.Session["userName"] = user.Username
+        c.Session["userType"] = strconv.Itoa(user.UserType)
         return c.RenderJson(responseJson)
     } else {
         responseJson = &Result{"caicaikana", "login failed"}
         c.Response.Status = 403
         c.Session["islogin"] = "false"
         c.Session["userName"] = ""
+        c.Session["userType"] = "0"
         return c.RenderJson(responseJson)
 
     }
@@ -79,6 +83,7 @@ func (c Admin) Register(user *models.User) revel.Result {
     } else {
         c.Session["islogin"] = "true"
         c.Session["userName"] = user.Username
+        c.Session["userType"] = strconv.Itoa(user.UserType)
         revel.INFO.Println("register success")
         return c.RenderJson(&Result{"success", "register"})
     }
