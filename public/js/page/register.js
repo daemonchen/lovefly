@@ -7,7 +7,9 @@ lovefly.controller('RegisterController', function($scope, $http, $log, _, $cooki
         $log.log($scope.username);
         return $http.post('/register/register', {
             username: $scope.username,
+            email: $scope.email,
             password: $scope.password
+            // repassword: $scope.repassword
         }).
         success(function() {
             $cookieStore.put("username", $scope.username);

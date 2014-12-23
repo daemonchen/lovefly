@@ -11,29 +11,55 @@
         <div class="title1"><a href="#">航记飞行</a><span>></span>注册</div>
         <div class="company-about">
             <div class="title2">
-                欢迎注册航记飞行
+                注册
             </div>
             <div class="coommon-p-word" ng-controller="RegisterController" style="padding-top:20px;">
                 <form class="form-horizontal">
                     <fieldset>
                         <div class="control-group">
                             <!-- Text input-->
-                            <label class="control-label" for="input01">用户名：</label>
+                            <label class="control-label" for="input01">
+                                <span class="red">*</span>用户名：
+                            </label>
                             <div class="controls">
-                                <input ng-model="username" type="text" placeholder="用户名" class="input-xlarge">
+                                <input ng-model="username" type="text" placeholder="用户名" class="input-xlarge default-text" ori_value="长度在6-12位之间" />
                             </div>
                         </div>
                         <div class="control-group">
                             <!-- Text input-->
-                            <label class="control-label" for="input01">密码：</label>
+                            <label class="control-label" for="input01">
+                                <span class="red">*</span>邮箱：
+                            </label>
                             <div class="controls">
-                                <input ng-model="password" type="text" placeholder="密码" class="input-xlarge">
+                                <input ng-model="email" type="text" placeholder="密码" class="input-xlarge default-text" ori_value="example@example.com" />
                             </div>
                         </div>
                         <div class="control-group">
+                            <!-- Text input-->
+                            <label class="control-label" for="input01">
+                                <span class="red">*</span>输入密码：
+                            </label>
+                            <div class="controls">
+                                <input ng-model="password" type="text" placeholder="密码" class="input-xlarge default-text" ori_value="数字或字母,长度在6-12位之间" />
+                            </div>
+                        </div>
+                        <!-- <div class="control-group">
+                            <label class="control-label" for="input01">
+                                <span class="red">*</span>确认密码：
+                            </label>
+                            <div class="controls">
+                                <input ng-model="repassword" type="text" placeholder="密码" class="input-xlarge default-text" ori_value="请重新输入新密码">
+                            </div>
+                        </div> -->
+                        <div class="control-group">
                             <!-- Button -->
                             <div class="controls">
-                                <button class="btn btn-success" ng-click="register()">注 册</button>
+                                <button class="btn btn-success" ng-click="register()">
+                                    注册帐户
+                                </button>
+                                <a class="btn btn-primary" href="/login/index" style="color:#fff;">
+                                    会员登录
+                                </a>
                             </div>
                         </div>
                     </fieldset>

@@ -103,3 +103,54 @@ $(document).ready(function(){
     });
 
 });
+
+$(window).load(function(){
+    var topheight=parseInt($(".header").outerHeight())+parseInt($(".right").outerHeight())+parseInt($(".footer").outerHeight())+30;
+    if(topheight<parseInt($(window).height())){
+        $(".footer").addClass("footer-bottom");
+    }
+    else{}
+
+
+    /*text*/
+    $(".default-text").each(function(){
+        var thisoi=$(this).attr("ori_value");
+
+        if($(this).next("input").attr("type")=="password"){
+            if($(this).val()==""){
+                $(this).val(thisoi);
+            } else {}
+
+            $(this).focus(function(){
+                $(this).hide();
+                $(this).next("input[type='password']").show().focus();
+            });
+
+            $(this).siblings("input[type='password']").blur(function(){
+                if($(this).val()==''){
+                    $(this).hide();
+                    $(this).prev("input[type='text']").val(thisoi).show();
+                }
+            });
+        }
+
+        else{
+            if($(this).val()==""){
+                $(this).val(thisoi);
+            } else {}
+
+            $(this).focus(function(){
+                if($(this).val()==thisoi){
+                    $(this).val("");
+                }
+            });
+
+            $(this).blur(function(){
+                if($(this).val()==''){
+                    $(this).val(thisoi);
+                }
+            });
+        }
+    });
+    /*text-end*/
+});
