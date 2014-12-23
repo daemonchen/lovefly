@@ -137,6 +137,7 @@ background:url(/public/img/v2/down_arrow.gif) no-repeat right center;
 {
 color:#1570a6;
 font-weight:normal;
+line-height: 24px;
 }
 .header_content ul li a:hover
 {
