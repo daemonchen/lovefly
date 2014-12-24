@@ -105,11 +105,11 @@ $(document).ready(function(){
 });
 
 $(window).load(function(){
-    var topheight=parseInt($(".header").outerHeight())+parseInt($(".right").outerHeight())+parseInt($(".footer").outerHeight())+30;
-    if(topheight<parseInt($(window).height())){
-        $(".footer").addClass("footer-bottom");
-    }
-    else{}
+    // var topheight=parseInt($(".header").outerHeight())+parseInt($(".right").outerHeight())+parseInt($(".footer").outerHeight())+30;
+    // if(topheight<parseInt($(window).height())){
+    //     $(".footer").addClass("footer-bottom");
+    // }
+    // else{}
 
 
     /*text*/

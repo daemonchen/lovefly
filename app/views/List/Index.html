@@ -8,13 +8,13 @@
     {{template "common/navigation.html" .}}
     <!--right-->
     <div class="right">
-        <div class="title1" ng-controller="CategoryController">
+        <div class="title1" ng-controller="CategoryController" ng-cloak>
             <a href="/">航记飞行</a>
             <span>></span>[[currentCategory.name]]
         </div>
         <div class="company-about">
             <div class="title2" ng-controller="CategoryController">
-                <a ng-href="/list/index?categoryId=[[categoryId]]&subCategoryId=[[subCategory.id]]" class="news-select [[subCategory.selected]]" ng-repeat="subCategory in subCategories">
+                <a ng-href="/list/index?categoryId=[[categoryId]]&subCategoryId=[[subCategory.id]]" class="news-select [[subCategory.selected]]" ng-repeat="subCategory in subCategories" ng-cloak>
                     [[subCategory.name]]
                 </a>
             </div>
