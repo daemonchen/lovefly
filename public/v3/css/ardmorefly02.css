@@ -1,0 +1,204 @@
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;text-decoration:none;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+
+.hd {
+	float: none;
+	height: auto;
+	width: 100%;
+	background-color:#1B1B1B;
+}
+.hd .tou1{
+    width:1001px;
+	height:48px;
+	float:none;
+	margin:0 auto;
+   }
+   
+.hd .tou2{
+     width:100%;
+	 height:551px;
+	 float:none;
+	 border:0px;
+
+	 }
+.tou2 .tou3{
+
+     width:100%;
+	 height:553px;
+	 margin:0 auto;
+	 float:none;
+	 }
+	 
+.zhuti{ width:1001px;
+      margin:0 auto;
+     float:none;
+	 }
+	 
+
+.cpzs{
+     width:1001px;
+	 float:none;
+	 margin:0 auto;
+	 }
+	 
+.cpzs .leftcp{
+    width:537px;
+	float:left;
+	}
+	
+.cpzs .rightcp{
+    width:541px;
+	float:left;
+	}
+	
+.leftcp .cp01{
+
+    float:none;
+	width:537px;
+	}
+	
+.leftcp .cp02{
+
+    float:none;
+	width:537px;
+	}
+	
+.rightcp .cp03{
+    width:541px;
+	padding-top:144px;
+	float:none;}
+	
+	
+.hehu{ width:1001px;
+     
+	 float:none;
+	 }
+	 
+.hehu .hh{ width:270px;
+    height:89px;
+	margin:0 auto;
+	margin-top:113px;
+	margin-bottom:170px;}
+	
+.footer{ width:100%;
+     height:416px;
+	 float:none;
+	 background-color:#1B1B1B;
+	 }
+	 
+.footer .ft{ width:1001px;
+    height:416px;
+	margin:0 auto;
+	}
+	
+	
+	
+.cpzs .cpzs01{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+
+.cpzs .cpzs02{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs03{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs04{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs05{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs06{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs07{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs08{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs09{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs10{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs11{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs12{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs13{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs14{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs15{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs16{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+.cpzs .cpzs17{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+.cpzs .cpzs18{
+    width:1001px;
+	float:none;
+	margin:0 auto;
+	}
+	
+

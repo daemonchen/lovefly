@@ -1,0 +1,160 @@
+
+{{set . "title" "航记飞行"}}
+{{append . "moreStyles" "/css/v2/page/home.css"}}
+{{append . "moreScripts" "/public/js/page/home.js"}}
+{{append . "moreScripts" "/public/js/lib/easing.js"}}
+{{template "common/header.html" .}}
+
+<!--content-->
+<div class="content">
+
+    {{template "common/navigation.html" .}}
+
+     <!--right-->
+     <div class="right">
+          <div class="title1"><a href="/">航记飞行</a><span>></span>首页</div>
+
+          <div class="kv kv_click">
+                <div class="banner seliaop" style="left:0;">
+                  <a href="http://lovefly.com/post/index?stamp=1418794587099">
+                    <img src="/public/img/v2/kv2.jpg" />
+                  </a>
+                </div>
+                <div class="banner">
+                    <a href="http://lovefly.com/post/index?categoryId=1&subCategoryId=&stamp=1419085978731">
+                        <img src="http://lovefly.qiniudn.com/nw1.jpg" />
+                    </a>
+                </div>
+                <div class="banner">
+                    <a href="http://lovefly.com/post/index?stamp=1418795378441">
+                        <img src="http://7sbm1c.com1.z0.glb.clouddn.com/sos1.jpg" />
+                    </a>
+                </div>
+
+          </div>
+
+          <ul class="kv_tips">
+              <li class="selected">2014年度最佳无人机航拍照<span></span></li>
+              <li>让美国飞行员欲罢不能的..<span></span></li>
+              <li>紧急救援的问题与出路<span></span></li>
+
+          </ul>
+
+          <div class="company-about">
+
+              <div class="title2">公司介绍</div>
+
+              <p class="coommon-p-word">
+              上海航记飞行投资有限公司是北美及欧洲多家全球著名飞行机构在中国的唯一合作伙伴。目前投资了爱●航记飞行www.lovefly.com 。公司秉承打造中国面向公众的第一航空飞行机构，为飞行爱好者，职业飞行员，与飞行相关的各企事业单位在中国低空飞行领域提供全方位一体化的标准与服务......<a href="http://lovefly.com/post/index?stamp=1417848946475">详细 &gt;</a>
+              </p>
+
+          </div>
+
+
+
+          <div class="title2">私人飞行/执照</div>
+
+          <ul class="advance_banner_new">
+              <li>
+                   <a href="/list/index?categoryId=2&subCategoryId=22">
+                      <img src="/public/img/v2/ind_yey_14.png" /><br/>
+                      仪器仪表<br/>
+                      执照
+                   </a>
+              </li>
+
+              <li>
+                   <a href="/list/index?categoryId=2&subCategoryId=23">
+                      <img src="/public/img/v2/ind_yey_11.png" /><br/>
+                      单引擎商业飞行<br/>
+                      执照
+                   </a>
+              </li>
+
+              <li>
+                   <a href="/list/index?categoryId=2&subCategoryId=24">
+                      <img src="/public/img/v2/ind_yey_22.png" /><br/>
+                      多引擎商业飞行<br/>
+                      执照
+                   </a>
+              </li>
+
+              <li>
+                   <a href="/list/index?categoryId=2&subCategoryId=25">
+                      <img src="/public/img/v2/ind_yey_17.png" /><br/>
+                      多引擎飞行<br/>
+                      执照
+                   </a>
+              </li>
+
+              <li>
+                   <a href="/list/index?categoryId=2&subCategoryId=26">
+                      <img src="/public/img/v2/ind_yey_25.png" /><br/>
+                      飞行维护<br/>
+                      执照
+                   </a>
+              </li>
+          </ul>
+
+
+
+          <div class="title2">申请流程</div>
+
+          <div><a href="/apply/index"><img src="/public/img/v2/process.jpg" /></a></div>
+
+
+
+          <div class="title2">新闻中心</div>
+
+          <!--large_banner-->
+          <div class="large_banner">
+              <ul>
+                  <li>
+                      <div><img src="/public/img/v2/banner1.jpg" /></div>
+                      <p class="bold">低空空域管理改革进程回顾及详解。</p>
+                      <p>
+                     低空空域通常是指真高1000米(含)以下的空间范围，分为三类空域：管制空域、监视空域和报告空域。"低空开放"则可理解成，解除部分航空器在某些低空空域活动的封锁、禁令、限制等......<a href="http://lovefly.com/post/index?stamp=1417870686963">详细&gt;</a>
+                      </p>
+                  </li>
+
+                  <li class="mr0">
+                      <div><img src="/public/img/v2/banner2.jpg" /></div>
+                      <p class="bold">明年低空开放 普通百姓能从中获得什么？</p>
+                      <p>
+                      日前闭幕的全国低空空域管理改革工作会议上，我国目前正在沈阳、广州飞行管制区，海南岛，长春、广州、唐山、西安、青岛、杭州、宁波、昆明、重庆......<a href="http://lovefly.com/post/index?stamp=1418796251058">详细&gt;</a>
+                      </p>
+                  </li>
+              </ul>
+
+               <ul>
+                  <li>
+                      <div><img src="/public/img/v2/banner3.jpg" /></div>
+                      <p class="bold">航空招飞压力大 明年飞行员缺口将达1万。</p>
+                      <p>
+                      近日来，各种有关招飞的新闻不断。面对高薪的诱惑，许多年轻人都蠢蠢欲动，梦想成为其中的一员。然而要想成为飞行员，有哪些途径？哪些人才有资格竞争飞行员？......<a href="http://lovefly.com/post/index?stamp=1417858085996">详细&gt;</a>
+                      </p>
+                  </li>
+
+                  <li class="mr0">
+                      <div><img src="/public/img/v2/banner4.jpg" /></div>
+                      <p class="bold">紧急救援的问题与出路。</p>
+                      <p>
+                      有人溺水如何安全施救？地震后志愿者该不该进入震区救援？如何应对救援过程中的媒体关注？直升机运送危重病人可以推广吗？1月28日至30日在北京举办的"中国国际防护救援展览会"上......<a href="http://lovefly.com/post/index?stamp=1418795378441">详细&gt;</a>
+                      </p>
+                  </li>
+              </ul>
+          </div>
+          <!--large_banner_end-->
+
+          <div><a href="/list/index?categoryId=3&subCategoryId=33"><img src="/public/img/v2/banener-bottom.jpg" style="width:100%; height:auto" /></a></div>
+
+     </div>
+     <!--right-->
+     <div class="clear"></div>
+</div>
+<!--content_end-->
+
+<div class="clear" style="height:30px;"></div>
+
+
+{{template "common/footer.html" .}}
