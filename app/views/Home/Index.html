@@ -12,44 +12,44 @@
 <script src="/public/v3/js/jquery.touchSlider.js"></script>
 <script>
 $(document).ready(function () {
-    $(".main_visual").hover(function(){
-        $("#btn_prev,#btn_next").fadeIn()
-        },function(){
-        $("#btn_prev,#btn_next").fadeOut()
-        })
+  $(".main_visual").hover(function(){
+    $("#btn_prev,#btn_next").fadeIn()
+    },function(){
+    $("#btn_prev,#btn_next").fadeOut()
+    })
+  $dragBln = false;
+  $(".main_image").touchSlider({
+    flexible : true,
+    speed : 200,
+    btn_prev : $("#btn_prev"),
+    btn_next : $("#btn_next"),
+    paging : $(".flicking_con a"),
+    counter : function (e) {
+      $(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+    }
+  });
+  $(".main_image").bind("mousedown", function() {
     $dragBln = false;
-    $(".main_image").touchSlider({
-        flexible : true,
-        speed : 200,
-        btn_prev : $("#btn_prev"),
-        btn_next : $("#btn_next"),
-        paging : $(".flicking_con a"),
-        counter : function (e) {
-            $(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
-        }
-    });
-    $(".main_image").bind("mousedown", function() {
-        $dragBln = false;
-    })
-    $(".main_image").bind("dragstart", function() {
-        $dragBln = true;
-    })
-    $(".main_image a").click(function() {
-        if($dragBln) {
-            return false;
-        }
-    })
+  })
+  $(".main_image").bind("dragstart", function() {
+    $dragBln = true;
+  })
+  $(".main_image a").click(function() {
+    if($dragBln) {
+      return false;
+    }
+  })
+  timer = setInterval(function() { $("#btn_next").click();}, 5000);
+  $(".main_visual").hover(function() {
+    clearInterval(timer);
+  }, function() {
     timer = setInterval(function() { $("#btn_next").click();}, 5000);
-    $(".main_visual").hover(function() {
-        clearInterval(timer);
-    }, function() {
-        timer = setInterval(function() { $("#btn_next").click();}, 5000);
-    })
-    $(".main_image").bind("touchstart", function() {
-        clearInterval(timer);
-    }).bind("touchend", function() {
-        timer = setInterval(function() { $("#btn_next").click();}, 5000);
-    })
+  })
+  $(".main_image").bind("touchstart", function() {
+    clearInterval(timer);
+  }).bind("touchend", function() {
+    timer = setInterval(function() { $("#btn_next").click();}, 5000);
+  })
 });
 </script>
 <link href="/public/v3/css/ardmorefly02.css" rel="stylesheet" type="text/css" />
@@ -60,35 +60,35 @@ $(document).ready(function () {
    <div class="hd">
            <div class="tou1"><img src="/public/v3/images/ardmorefly_02.jpg" border="0" usemap="#Map" />
 <map name="Map" id="Map">
-  <area shape="rect" coords="1,9,280,69" href="http://www.vfast.com.cn/ard/index.html" target="_self" />
+  <area shape="rect" coords="1,9,280,69"  target="_self" />
 <area shape="rect" coords="926,4,1002,49" href="" target="_blank" />
 </map></div>
-           <div class="tou2">
-               <div class="tou3">
+       <div class="tou2">
+           <div class="tou3">
 
-                      <div class="main_visual">
+            <div class="main_visual">
                 <div class="flicking_con">
-                    <div class="flicking_inner">
+                  <div class="flicking_inner">
                     <a href="javascript:">1</a>
                     <a href="javascript:">2</a>
                     <a href="javascript:">3</a>
 
                  </div>
             </div>
-            <div class="main_image">
-                <ul>
-                    <li><a  target="_blank" /><span class="img_1"></span></a></li>
-                    <li><a  /><span class="img_2"></span></a></li>
-                    <li><a  target="_blank" /><span class="img_3"></span></a></li>
-                </ul>
-                <a href="javascript:;" id="btn_prev"></a>
-                <a href="javascript:;" id="btn_next"></a>
-            </div>
-            </div>
+      <div class="main_image">
+        <ul>
+          <li><a  target="_blank" /><span class="img_1"></span></a></li>
+          <li><a  /><span class="img_2"></span></a></li>
+          <li><a  target="_blank" /><span class="img_3"></span></a></li>
+        </ul>
+        <a href="javascript:;" id="btn_prev"></a>
+        <a href="javascript:;" id="btn_next"></a>
+      </div>
+      </div>
 
-               </div>
+         </div>
 
-           </div>
+       </div>
 
    </div>
 
@@ -98,42 +98,42 @@ $(document).ready(function () {
 
   <div class="zhuti">
 
-       <!--产品展示部分开始-->
-       <div class="cpzs">
+     <!--产品展示部分开始-->
+     <div class="cpzs">
 
-            <div class="cpzs01"><img src="/public/v3/images/ardmorefly_07.jpg" /></div>
-            <div class="cpzs02"><img src="/public/v3/images/ardmorefly_08.jpg" /></div>
-            <div class="cpzs03"><img src="/public/v3/images/ardmorefly_09.jpg" /></div>
-            <div class="cpzs04"><img src="/public/v3/images/ardmorefly_10.jpg" /></div>
-            <div class="cpzs05"><img src="/public/v3/images/ardmorefly_11.jpg" /></div>
-            <div class="cpzs06"><img src="/public/v3/images/ardmorefly_12.jpg" /></div>
-            <div class="cpzs07"><img src="/public/v3/images/ardmorefly_13.jpg" /></div>
-            <div class="cpzs08"><img src="/public/v3/images/ardmorefly_14.jpg" border="0" usemap="#Map2" />
-<map name="Map2" id="Map2"><area shape="rect" coords="511,3,932,157" href="http://chat.looyu.com/chat/chat/p.do?c=47138&f=119356&g=84553" target="_blank" />
+      <div class="cpzs01"><img src="/public/v3/images/ardmorefly_07.jpg" /></div>
+      <div class="cpzs02"><img src="/public/v3/images/ardmorefly_08.jpg" /></div>
+      <div class="cpzs03"><img src="/public/v3/images/ardmorefly_09.jpg" /></div>
+      <div class="cpzs04"><img src="/public/v3/images/ardmorefly_10.jpg" /></div>
+      <div class="cpzs05"><img src="/public/v3/images/ardmorefly_11.jpg" /></div>
+      <div class="cpzs06"><img src="/public/v3/images/ardmorefly_12.jpg" /></div>
+      <div class="cpzs07"><img src="/public/v3/images/ardmorefly_13.jpg" /></div>
+      <div class="cpzs08"><img src="/public/v3/images/ardmorefly_14.jpg" border="0" usemap="#Map2" />
+<map name="Map2" id="Map2"><area shape="rect" coords="511,3,932,157"  target="_blank" />
 </map></div>
-            <div class="cpzs09"><img src="/public/v3/images/ardmorefly_15.jpg" /></div>
-            <div class="cpzs10"><img src="/public/v3/images/ardmorefly_16.jpg" border="0" usemap="#Map3" />
-<map name="Map3" id="Map3"><area shape="rect" coords="680,115,876,295" href="http://chat.looyu.com/chat/chat/p.do?c=47138&f=119356&g=84553" target="_blank" />
+      <div class="cpzs09"><img src="/public/v3/images/ardmorefly_15.jpg" /></div>
+      <div class="cpzs10"><img src="/public/v3/images/ardmorefly_16.jpg" border="0" usemap="#Map3" />
+<map name="Map3" id="Map3"><area shape="rect" coords="680,115,876,295"  target="_blank" />
 </map></div>
-            <div class="cpzs11"><img src="/public/v3/images/ardmorefly_17.jpg" /></div>
-            <div class="cpzs12"><img src="/public/v3/images/ardmorefly_18.jpg" /></div>
-            <div class="cpzs13"><img src="/public/v3/images/ardmorefly_19.jpg" border="0" usemap="#Map4" />
-<map name="Map4" id="Map4"><area shape="rect" coords="513,45,929,206" href="http://chat.looyu.com/chat/chat/p.do?c=47138&f=119356&g=84553" target="_blank" />
+      <div class="cpzs11"><img src="/public/v3/images/ardmorefly_17.jpg" /></div>
+      <div class="cpzs12"><img src="/public/v3/images/ardmorefly_18.jpg" /></div>
+      <div class="cpzs13"><img src="/public/v3/images/ardmorefly_19.jpg" border="0" usemap="#Map4" />
+<map name="Map4" id="Map4"><area shape="rect" coords="513,45,929,206"  target="_blank" />
 </map></div>
-            <div class="cpzs14"><img src="/public/v3/images/ardmorefly_20.jpg" /></div>
-            <div class="cpzs15"><img src="/public/v3/images/ardmorefly_21.jpg" /></div>
-            <div class="cpzs16"><img src="/public/v3/images/ardmorefly_22.jpg" /></div>
-            <div class="cpzs17"><img src="/public/v3/images/ardmorefly_23.jpg" /></div>
-            <div class="cpzs18"><img src="/public/v3/images/ardmorefly_24.jpg" border="0" usemap="#Map5" />
-<map name="Map5" id="Map5"><area shape="rect" coords="514,239,931,398" href="http://chat.looyu.com/chat/chat/p.do?c=47138&f=119356&g=84553" target="_blank" />
+      <div class="cpzs14"><img src="/public/v3/images/ardmorefly_20.jpg" /></div>
+      <div class="cpzs15"><img src="/public/v3/images/ardmorefly_21.jpg" /></div>
+      <div class="cpzs16"><img src="/public/v3/images/ardmorefly_22.jpg" /></div>
+      <div class="cpzs17"><img src="/public/v3/images/ardmorefly_23.jpg" /></div>
+      <div class="cpzs18"><img src="/public/v3/images/ardmorefly_24.jpg" border="0" usemap="#Map5" />
+<map name="Map5" id="Map5"><area shape="rect" coords="514,239,931,398"  target="_blank" />
 </map></div>
 
-            <div style="clear:both"></div>
+        <div style="clear:both"></div>
 
 
 
 
-       </div>
+     </div>
         <!--产品展示部分结束-->
 
 
@@ -144,7 +144,7 @@ $(document).ready(function () {
    <!--中间主体部分结束-->
 
        <div class="footer">
-            <div class="ft"><img src="/public/v3/images/ardmorefly_25.jpg" border="0" usemap="#Map6" />
+        <div class="ft"><img src="/public/v3/images/ardmorefly_25.jpg" border="0" usemap="#Map6" />
 <map name="Map6" id="Map6"><area shape="rect" coords="700,262,843,294"  target="_blank" />
 </map></div>
 </div>
